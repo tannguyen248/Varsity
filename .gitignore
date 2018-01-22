@@ -1,0 +1,3 @@
+/App_Data/*.ldf
+/App_Data/Sitefinity_log.ldf
+/App_Data/Sitefinity.mdf
