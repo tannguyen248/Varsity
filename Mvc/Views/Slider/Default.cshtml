@@ -1,0 +1,6 @@
+@model  SitefinityWebApp.Mvc.Models.SliderModel
+@using Telerik.Sitefinity.GenericContent.Model;
+
+<section class="@Model.ContainerClasses" >
+	@Html.Raw(Model.ContentItem.Content.Value)
+</section>

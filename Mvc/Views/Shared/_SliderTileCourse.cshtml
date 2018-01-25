@@ -1,0 +1,20 @@
+﻿@using Telerik.Sitefinity.Model;
+@model Telerik.Sitefinity.DynamicModules.Model.DynamicContent
+
+<div class="mu-latest-course-single">
+	<figure class="mu-latest-course-img">
+		<a href="#"><img src="@Model.GetValue("ImageLink")" alt="img"></a>
+		<figcaption class="mu-latest-course-imgcaption">
+			<a href="#">@Model.GetValue("Type")</a>
+			<span><i class="fa fa-clock-o"></i>@Model.GetValue("Day")</span>
+		</figcaption>
+	</figure>
+	<div class="mu-latest-course-single-content">
+		<h4><a href="#">@Model.GetValue("DisplayTitle")</a></h4>
+		<p>@Model.GetValue("ShortDescription")</p>
+		<div class="mu-latest-course-single-contbottom">
+			<a class="mu-course-details" href="@Model.GetValue("Title")">Details</a>
+			<span class="mu-course-price" href="#">@Model.GetValue("Price")</span>
+		</div>
+	</div>
+</div>

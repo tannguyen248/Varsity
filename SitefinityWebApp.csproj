@@ -460,6 +460,10 @@
       <HintPath>bin\System.Spatial.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>bin\System.Web.Http.Cors.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
@@ -470,14 +474,13 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.OData">
       <HintPath>bin\System.Web.OData.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -490,34 +493,25 @@
       <HintPath>bin\System.Web.Http.Tracing.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\System.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\System.Web.Razor.dll</HintPath>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Services" />
-    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\System.Web.WebPages.dll</HintPath>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\System.Web.WebPages.Deployment.dll</HintPath>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\System.Web.WebPages.Razor.dll</HintPath>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows">
@@ -1098,11 +1092,184 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="AzureWebRole.cs" />
+    <Compile Include="Constant\ConfigurationSource.cs" />
+    <Compile Include="CustomSitefinityRoute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Controllers\CourseDetailController.cs" />
+    <Compile Include="Mvc\Controllers\HTMLContentController.cs" />
+    <Compile Include="Mvc\Controllers\NavigationController.cs" />
+    <Compile Include="Mvc\Controllers\PaginationController.cs" />
+    <Compile Include="Mvc\Controllers\SliderController.cs" />
+    <Compile Include="Mvc\Models\CourseDetailModel.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Mvc\Models\HTMLContentModel.cs" />
+    <Compile Include="Mvc\Models\NavigationModel.cs" />
+    <Compile Include="Mvc\Models\PaginationModel.cs" />
+    <Compile Include="Mvc\Models\SliderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DynamicContentHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Configurations\Navigation.txt" />
+    <Content Include="App_Data\Configurations\Slider.txt" />
+    <Content Include="Contents\Images\about-us.jpg" />
+    <Content Include="Contents\Images\blank.gif" />
+    <Content Include="Contents\Images\blog\blog-1.jpg" />
+    <Content Include="Contents\Images\blog\blog-2.jpg" />
+    <Content Include="Contents\Images\blog\blog-3.jpg" />
+    <Content Include="Contents\Images\classic-loader.gif" />
+    <Content Include="Contents\Images\classic-map.png" />
+    <Content Include="Contents\Images\counter-bg.jpg" />
+    <Content Include="Contents\Images\courses\1.jpg" />
+    <Content Include="Contents\Images\courses\2.jpg" />
+    <Content Include="Contents\Images\courses\3.jpg" />
+    <Content Include="Contents\Images\fancybox-x.png" />
+    <Content Include="Contents\Images\fancybox-y.png" />
+    <Content Include="Contents\Images\fancybox.png" />
+    <Content Include="Contents\Images\fancy_title_over.png" />
+    <Content Include="Contents\Images\favicon.ico" />
+    <Content Include="Contents\Images\gallery\1%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\1.jpg" />
+    <Content Include="Contents\Images\gallery\2%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\2.jpg" />
+    <Content Include="Contents\Images\gallery\3%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\3.jpg" />
+    <Content Include="Contents\Images\gallery\4%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\4.jpg" />
+    <Content Include="Contents\Images\gallery\5%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\5.jpg" />
+    <Content Include="Contents\Images\gallery\6%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\6.jpg" />
+    <Content Include="Contents\Images\gallery\7%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\7.jpg" />
+    <Content Include="Contents\Images\gallery\8%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\8.jpg" />
+    <Content Include="Contents\Images\gallery\9%281%29.jpg" />
+    <Content Include="Contents\Images\gallery\9.jpg" />
+    <Content Include="Contents\Images\gallery\about-us.jpg" />
+    <Content Include="Contents\Images\gallery\big\1.jpg" />
+    <Content Include="Contents\Images\gallery\big\2.jpg" />
+    <Content Include="Contents\Images\gallery\big\3.jpg" />
+    <Content Include="Contents\Images\gallery\big\4.jpg" />
+    <Content Include="Contents\Images\gallery\big\5.jpg" />
+    <Content Include="Contents\Images\gallery\big\6.jpg" />
+    <Content Include="Contents\Images\gallery\big\7.jpg" />
+    <Content Include="Contents\Images\gallery\big\8.jpg" />
+    <Content Include="Contents\Images\gallery\big\9.jpg" />
+    <Content Include="Contents\Images\gallery\blog-1.jpg" />
+    <Content Include="Contents\Images\gallery\blog-3.jpg" />
+    <Content Include="Contents\Images\gallery\fancybox_buttons.png" />
+    <Content Include="Contents\Images\gallery\fancybox_loading%402x.gif" />
+    <Content Include="Contents\Images\gallery\fancybox_loading.gif" />
+    <Content Include="Contents\Images\gallery\fancybox_overlay.png" />
+    <Content Include="Contents\Images\gallery\fancybox_sprite%402x.png" />
+    <Content Include="Contents\Images\gallery\fancybox_sprite.png" />
+    <Content Include="Contents\Images\gallery\small\1.jpg" />
+    <Content Include="Contents\Images\gallery\small\2.jpg" />
+    <Content Include="Contents\Images\gallery\small\3.jpg" />
+    <Content Include="Contents\Images\gallery\small\4.jpg" />
+    <Content Include="Contents\Images\gallery\small\5.jpg" />
+    <Content Include="Contents\Images\gallery\small\6.jpg" />
+    <Content Include="Contents\Images\gallery\small\7.jpg" />
+    <Content Include="Contents\Images\gallery\small\8.jpg" />
+    <Content Include="Contents\Images\gallery\small\9.jpg" />
+    <Content Include="Contents\Images\libs\1%281%29.jpg" />
+    <Content Include="Contents\Images\libs\1.jpg" />
+    <Content Include="Contents\Images\libs\2%281%29.jpg" />
+    <Content Include="Contents\Images\libs\2.jpg" />
+    <Content Include="Contents\Images\libs\3%281%29.jpg" />
+    <Content Include="Contents\Images\libs\3.jpg" />
+    <Content Include="Contents\Images\libs\about-us.jpg" />
+    <Content Include="Contents\Images\libs\blog-1.jpg" />
+    <Content Include="Contents\Images\libs\home-property-featured.png" />
+    <Content Include="Contents\Images\libs\rex-featured-img.jpg" />
+    <Content Include="Contents\Images\libs\spicyx-featured-img.png" />
+    <Content Include="Contents\Images\libs\teacher-01.png" />
+    <Content Include="Contents\Images\libs\teacher-02.png" />
+    <Content Include="Contents\Images\libs\teacher-03.png" />
+    <Content Include="Contents\Images\libs\teacher-04.png" />
+    <Content Include="Contents\Images\libs\testimonial-1.png" />
+    <Content Include="Contents\Images\libs\testimonial-2.png" />
+    <Content Include="Contents\Images\libs\testimonial-3.png" />
+    <Content Include="Contents\Images\loader - Copy.gif" />
+    <Content Include="Contents\Images\loader.gif" />
+    <Content Include="Contents\Images\logo.png" />
+    <Content Include="Contents\Images\sfArrows.gif" />
+    <Content Include="Contents\Images\sfBigStatusIcons.png" />
+    <Content Include="Contents\Images\sfEcommerce.gif" />
+    <Content Include="Contents\Images\sfFileExtensions.gif" />
+    <Content Include="Contents\Images\sfFileExtensionsSml.gif" />
+    <Content Include="Contents\Images\sfForums.gif" />
+    <Content Include="Contents\Images\sfIcons.gif" />
+    <Content Include="Contents\Images\sfLoadingData.gif" />
+    <Content Include="Contents\Images\sfPublicContent.gif" />
+    <Content Include="Contents\Images\slider\1.jpg" />
+    <Content Include="Contents\Images\slider\2.jpg" />
+    <Content Include="Contents\Images\slider\3.jpg" />
+    <Content Include="Contents\Images\slider\ajax-loader.gif" />
+    <Content Include="Contents\Images\slider\loader.gif" />
+    <Content Include="Contents\Images\teachers\teacher-01.png" />
+    <Content Include="Contents\Images\teachers\teacher-02.png" />
+    <Content Include="Contents\Images\teachers\teacher-03.png" />
+    <Content Include="Contents\Images\teachers\teacher-04.png" />
+    <Content Include="Contents\Images\testimonial-1.png" />
+    <Content Include="Contents\Images\testimonial-2.png" />
+    <Content Include="Contents\Images\testimonial-3.png" />
+    <Content Include="Contents\Images\testimonial-bg.jpg" />
+    <Content Include="Contents\Images\_counter-bg.jpg" />
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\css\main.css" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\css\main.min.css" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.svg" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\images\sprite.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\icons\file.svg" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\icons\no-image.svg" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\blogger.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\comment.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\delicious.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\digg.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\email.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\facebook.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\feed.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\google.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\linkedin.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\mailto.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\myspace.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\reddit.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\remove.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\stumble-upon.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\tumblr.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\twitter.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\feather-icons.css" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\sf-icon-font.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\container.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-12.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-2+3+2+3+2.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-3+3+3+3.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-3+6+3.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-3+9.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-4+4+4.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-4+8.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-6+6.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-8+4.html" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-9+3.html" />
+    <Content Include="ResourcePackages\Bootstrap\gruntfile.js" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Scripts\Navigation\pills.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\jquery.counterup.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\pagination.js" />
+    <Content Include="Scripts\slick.min.js" />
+    <Content Include="Scripts\waypoints.js" />
     <Content Include="Sitefinity\Default.aspx" />
     <Content Include="Sitefinity\Public\Services\Thunder\ThunderService.svc" />
     <Content Include="Sitefinity\Services\Analytics\AnalyticsPermissionsService.svc" />
@@ -1211,6 +1378,16 @@
     <Content Include="Sitefinity\Services\Versioning\HistoryService.svc" />
     <Content Include="Sitefinity\Services\Workflow\WorkflowDefinitionService.svc" />
     <Content Include="Sitefinity\Services\Workflow\WorkflowService.svc" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\default-theme.css" />
+    <Content Include="Styles\events.widget.css" />
+    <Content Include="Styles\fancybox.css" />
+    <Content Include="Styles\font-awesome.css" />
+    <Content Include="Styles\galleria.classic.css" />
+    <Content Include="Styles\icons.css" />
+    <Content Include="Styles\nav.widget.css" />
+    <Content Include="Styles\slick.css" />
+    <Content Include="Styles\style.css" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1225,11 +1402,171 @@
     <Content Include="App_Data\RadSpell\fr-FR.tdf" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Sitefinity\" />
+    <Folder Include="App_Data\Sitefinity\WebsiteTemplates\DefaultTemplate\App_Themes\DefaultTemplate\Global\" />
+    <Folder Include="App_Data\Sitefinity\WebsiteTemplates\DefaultTemplate\App_Themes\DefaultTemplate\Images\" />
+    <Folder Include="App_Data\Sitefinity\WebsiteTemplates\DefaultTemplate\App_Themes\DefaultTemplate\Styles\" />
+    <Folder Include="Contents\Images\Images\" />
+    <Folder Include="fonts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\GeoLocation\GeoLiteCity.dat" />
     <Content Include="packages.config" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.eot" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.ttf" />
+    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.woff" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\project\sass\main.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\base\_pre.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\feather-icons.json" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\_icons.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\_sf-icon-font.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\loading\_loading.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\settings\_variables.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\sitefinity.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\tools\_bootstrap-mixins.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\tools\_mixins.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\utilities\_spacing.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\utilities\_text.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\code\_sf-code.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\comments\_sf-comments.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\comments\_sf-ratings.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\contentBlock\_sf-content-block.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\documentList\_sf-document-list.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\event\_sf-event.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\feed\_sf-feed.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\fileField\sf-file-field.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\formNavigation\sf-form-nav.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\gallery\_gallery.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\languageSelector\_sf-language-selector.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\list\_sf-list.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\login\_sf-login.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\media\_sf-media.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\navigation\_navbar.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\navigation\_sitemap.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\navigation\_stacked.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\profile\_sf-profile.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\searchBox\_sf-search-box.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\searchResults\_sf-search-results.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\siteSelector\_sf-site-selector.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\socialShare\sf-sprite.mustache" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\socialShare\_sf-social-share.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\socialShare\_sf-sprite.scss" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\taxonomies\_sf-tags.scss" />
+    <Content Include="ResourcePackages\Bootstrap\client-components\fields\html-field\sf-html-field.sf-cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\csslint.json" />
+    <Content Include="ResourcePackages\Bootstrap\jsfiles.json" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\AccountActivation\AccountActivation.AccountActivation.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\BlogPost\Detail.DetailPage.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\BlogPost\List.BlogPostList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Blog\Detail.DetailPage.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Blog\List.BlogList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Breadcrumb\Breadcrumb.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Captcha\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Card\Card.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Card\Card.Hero.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Card\Card.Simple.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\CheckboxesField\Read.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\CheckboxesField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\CheckboxesField\Write.Default_Inline.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Comments\Comments.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Comments\CommentsCount.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ContentBlock\Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DocumentsList\Detail.DocumentDetails.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DocumentsList\List.DocumentsList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DocumentsList\List.DocumentsTable.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Document\DocumentLink.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DropdownListField\Read.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DropdownListField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\EmbedCode\Index.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\EventScheduler\Detail.EventDetails.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\EventScheduler\List.Calendar.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Event\Detail.EventDetails.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Event\List.EventsList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Feed\Feed.FeedLink.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FileField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FlatTaxonomy\FlatTaxonomy.CloudList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FlatTaxonomy\FlatTaxonomy.SimpleList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FlatTaxonomy\FlatTaxonomy.TagCloud.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Form\Index.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\HiddenField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\HierarchicalTaxonomy\HierarchicalTaxonomy.CategoriesList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\Detail.DetailPage.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.ImageGallery.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.OverlayGallery.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.SimpleList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Image\Image.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\JavaScript\Index.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LanguageSelector\LanguageSelector.LanguageLinks.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Layouts\default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\Detail.DetailPage.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.AnchorList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.ExpandableList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.ExpandedList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.PagesList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.SimpleList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\ForgotPassword.ForgottenPassword.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\LoginForm.LoginForm.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginStatus\LoginStatus.LoginButton.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginStatus\LoginStatus.LoginName.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\MultipleChoiceField\Read.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\MultipleChoiceField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\MultipleChoiceField\Write.Default_Inline.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\NavigationField\Read.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\NavigationField\Read.ProgressBar.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\Dropdown.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Horizontal.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Pills.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Sitemap.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Tabs.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Vertical.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\News\Detail.DetailPage.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\News\List.NewsList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\PageBreak\Read.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ParagraphTextField\Read.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ParagraphTextField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\ConfirmPassword.ProfileEdit.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\Edit.ProfileEdit.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\Read.ProfilePreview.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Registration\Registration.RegistrationForm.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Reviews\Reviews.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Reviews\ReviewsCount.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SearchBox\SearchBox.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SearchResults\SearchResults.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SiteSelector\SiteSelector.DropDownMenu.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SiteSelector\SiteSelector.SiteLinks.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SocialShare\SocialShare.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SocialShare\SocialShareIconsWithText.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\StyleSheet\Index.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SubmitButton\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SubscribeForm\SubscribeForm.SubscribeForm.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\TextField\Read.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\TextField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UnsubscribeForm\UnsubscribeFormByLink.UnsubscribeMessage.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UsersList\Detail.UserDetails.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UsersList\List.UsersList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\VideoGallery\Detail.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\VideoGallery\List.OverlayGallery.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\VideoGallery\List.VideoGallery.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\package.json" />
+    <Content Include="ResourcePackages\Bootstrap\razorgenerator.directives" />
+    <Content Include="Scripts\.DS_Store" />
+    <Content Include="Mvc\Views\HTMLContent\Default.cshtml" />
+    <Content Include="Mvc\Views\Layouts\DefaultTemplate.cshtml" />
+    <Content Include="Mvc\Views\Navigation\Default.cshtml" />
+    <Content Include="Mvc\Views\Pagination\Default.cshtml" />
+    <Content Include="Mvc\Views\Slider\Default.cshtml" />
+    <Content Include="App_Data\Sitefinity\WebsiteTemplates\DefaultTemplate\App_Master\DefaultTemplate.master" />
+    <Content Include="Mvc\Views\CourseDetail\Default.cshtml" />
+    <Content Include="Mvc\Views\Shared\_SliderTileCourse.cshtml" />
+    <Content Include="Mvc\Views\Slider\Course.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
