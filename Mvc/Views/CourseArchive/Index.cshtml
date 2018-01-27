@@ -1,0 +1,76 @@
+﻿@{
+	Layout = null;
+}
+
+@using Telerik.Sitefinity.Model
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers
+@using System.Web.Optimization
+@using SitefinityWebApp.Utilities
+@model List<Telerik.Sitefinity.DynamicModules.Model.DynamicContent>
+
+@if (!SitefinityContext.IsBackend)
+{
+	<link href="~/Styles/bootstrap.css" rel="stylesheet" />
+}
+@Styles.Render("~/Styles/master")
+
+@if (!SitefinityContext.IsBackend)
+{
+	<script src="~/Scripts/jquery.min.js"></script>
+}
+
+@Scripts.Render("~/bundles/master")
+
+@{ 
+	int maxPage = ViewBag.MaxPage;
+	int currentPage = ViewBag.CurrentPage;
+}
+
+<div class="mu-course-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mu-course-content-area">
+					<div class="row">
+						<div class="col-md-9">
+							<!-- start course content container -->
+							<div class="mu-course-container">
+								<div class="row">
+									@foreach (var item in Model)
+									{
+										<div class="col-md-6 col-sm-6">
+											@{ Html.RenderPartial("_SliderTileCourse", item); }
+										</div>
+									}
+								</div>
+							</div>
+							<!-- end course content container -->
+							<!-- start course pagination -->
+							<div class="mu-pagination">
+								<nav>
+									<ul class="pagination">
+										<li>
+											<a href="@HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", (currentPage - 1).ToString()} })" aria-label="Previous" class="btn @(currentPage == 0 ? "disabled" : "")">
+												<span class="fa fa-angle-left"></span> Prev
+											</a>
+										</li>
+										@for (var i = 1; i <= maxPage; i++)
+										{
+											<li class="@(i == currentPage ? "active" : "")"><a href="@HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", i.ToString() } })">@i</a></li>
+										}
+										<li>
+											<a href="@HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", (currentPage + 1).ToString()} })" aria-label="Next" class="btn @(currentPage >= maxPage ? "disabled" : "")">
+												Next <span class="fa fa-angle-right"></span>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<!-- end course pagination -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

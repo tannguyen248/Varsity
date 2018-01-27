@@ -1,8 +1,11 @@
 ﻿@model  SitefinityWebApp.Mvc.Models.SliderModel
 
+<h1 style="color:white">@ViewBag.Count</h1>
 <section class="@Model.ContainerClasses">
 	@foreach (var item in Model.DynamicContentItems)
 	{
-		Html.RenderPartial("_SliderTileCourse", item);
+		<div class="@Model.TileClasses">
+			@{ Html.RenderPartial("_SliderTileCourse", item); }
+		</div>
 	}
 </section>

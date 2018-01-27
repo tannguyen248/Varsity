@@ -11,5 +11,6 @@ namespace SitefinityWebApp.Mvc.Models
         public ContentItem ContentItem { get; set; }
         public List<DynamicContent> DynamicContentItems { get; set; }
         public string ContainerClasses { get; set; }
+        public string TileClasses { get; set; }
     }
 }

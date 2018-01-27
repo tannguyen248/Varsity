@@ -12,6 +12,7 @@ using Telerik.Sitefinity.DynamicModules.Model;
 using Telerik.Sitefinity.DynamicModules;
 using Telerik.Sitefinity.Model;
 using Telerik.Sitefinity.Utilities.TypeConverters;
+using SitefinityWebApp.Utilities;
 
 namespace SitefinityWebApp.Mvc.Controllers
 {
@@ -30,11 +31,12 @@ namespace SitefinityWebApp.Mvc.Controllers
         /// </summary>
         public ActionResult Index()
         {
-            var titles = ContentTitles.Split(',').Select(x => x.Trim()).ToList();
+            var titles =  !string.IsNullOrWhiteSpace(ContentTitles) ? ContentTitles.Split(',').Select(x => x.Trim()).ToList() : new List<string>();
             var view = string.IsNullOrWhiteSpace(Template) ? "Default" : Template;
 
             var model = new SliderModel();
             model.ContainerClasses = ContainerClasses;
+            model.TileClasses = TileClasses;
 
             if (isDynamicContent)
             {
@@ -59,11 +61,9 @@ namespace SitefinityWebApp.Mvc.Controllers
         private List<DynamicContent> GetDynamicContent(List<string> titles, string type)
         {
             //"Telerik.Sitefinity.DynamicTypes.Model.Course.Course"
-            var dynamicModuleManager = DynamicModuleManager.GetManager();
-            var contentType = TypeResolutionService.ResolveType(type);
-            var contentItems = dynamicModuleManager.GetDataItems(contentType)
-                                        .Where(x => titles.Contains(x.GetValue("Title").ToString()) && x.Status == ContentLifecycleStatus.Live)
-                                        .ToList();
+            var contentItems =  DynamicContentHelpers.GetDynamicContent(type);
+
+            ViewBag.Count = contentItems.Count;
             return contentItems;
         }
     }

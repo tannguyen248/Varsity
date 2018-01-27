@@ -27,6 +27,12 @@ namespace ASP
     using System.Web.UI;
     using System.Web.WebPages;
     
+    #line 2 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+    using SitefinityWebApp.Utilities;
+    
+    #line default
+    #line hidden
+    
     #line 1 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
     using Telerik.Sitefinity.Model;
     
@@ -56,14 +62,14 @@ WriteLiteral(" href=\"#\"");
 
 WriteLiteral("><img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 196), Tuple.Create("\"", 230)
+WriteAttribute("src", Tuple.Create(" src=\"", 230), Tuple.Create("\"", 264)
             
-            #line 6 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
-, Tuple.Create(Tuple.Create("", 202), Tuple.Create<System.Object, System.Int32>(Model.GetValue("ImageLink")
+            #line 7 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+, Tuple.Create(Tuple.Create("", 236), Tuple.Create<System.Object, System.Int32>(Model.GetValue("ImageLink")
             
             #line default
             #line hidden
-, 202), false)
+, 236), false)
 );
 
 WriteLiteral(" alt=\"img\"");
@@ -79,7 +85,7 @@ WriteLiteral(" href=\"#\"");
 WriteLiteral(">");
 
             
-            #line 8 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+            #line 9 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
                    Write(Model.GetValue("Type"));
 
             
@@ -92,13 +98,13 @@ WriteLiteral(" class=\"fa fa-clock-o\"");
 WriteLiteral("></i>");
 
             
-            #line 9 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
-                                          Write(Model.GetValue("Day"));
+            #line 10 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+                                          Write(Model.GetValue("Days"));
 
             
             #line default
             #line hidden
-WriteLiteral("</span>\r\n\t\t</figcaption>\r\n\t</figure>\r\n\t<div");
+WriteLiteral("Days</span>\r\n\t\t</figcaption>\r\n\t</figure>\r\n\t<div");
 
 WriteLiteral(" class=\"mu-latest-course-single-content\"");
 
@@ -109,7 +115,7 @@ WriteLiteral(" href=\"#\"");
 WriteLiteral(">");
 
             
-            #line 13 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+            #line 14 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
                    Write(Model.GetValue("DisplayTitle"));
 
             
@@ -118,7 +124,7 @@ WriteLiteral(">");
 WriteLiteral("</a></h4>\r\n\t\t<p>");
 
             
-            #line 14 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+            #line 15 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
       Write(Model.GetValue("ShortDescription"));
 
             
@@ -132,14 +138,14 @@ WriteLiteral(">\r\n\t\t\t<a");
 
 WriteLiteral(" class=\"mu-course-details\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 679), Tuple.Create("\"", 710)
+WriteAttribute("href", Tuple.Create(" href=\"", 718), Tuple.Create("\"", 893)
             
-            #line 16 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
-, Tuple.Create(Tuple.Create("", 686), Tuple.Create<System.Object, System.Int32>(Model.GetValue("Title")
+            #line 17 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+, Tuple.Create(Tuple.Create("", 725), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.ActionLink("Course", "Index", "CourseDetail", new Dictionary<string, string> { { "title", Utils.EncodeDetailTitle(@Model.GetValue("Title").ToString()) } })
             
             #line default
             #line hidden
-, 686), false)
+, 725), false)
 );
 
 WriteLiteral(">Details</a>\r\n\t\t\t<span");
@@ -151,7 +157,7 @@ WriteLiteral(" href=\"#\"");
 WriteLiteral(">");
 
             
-            #line 17 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
+            #line 18 "..\..\MVC\Views\Shared\_SliderTileCourse.cshtml"
                                               Write(Model.GetValue("Price"));
 
             

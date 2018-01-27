@@ -1,4 +1,5 @@
-﻿@using Telerik.Sitefinity.Model;
+﻿@using Telerik.Sitefinity.Model
+@using SitefinityWebApp.Utilities
 @model Telerik.Sitefinity.DynamicModules.Model.DynamicContent
 
 <div class="mu-latest-course-single">
@@ -6,14 +7,14 @@
 		<a href="#"><img src="@Model.GetValue("ImageLink")" alt="img"></a>
 		<figcaption class="mu-latest-course-imgcaption">
 			<a href="#">@Model.GetValue("Type")</a>
-			<span><i class="fa fa-clock-o"></i>@Model.GetValue("Day")</span>
+			<span><i class="fa fa-clock-o"></i>@Model.GetValue("Days")Days</span>
 		</figcaption>
 	</figure>
 	<div class="mu-latest-course-single-content">
 		<h4><a href="#">@Model.GetValue("DisplayTitle")</a></h4>
 		<p>@Model.GetValue("ShortDescription")</p>
 		<div class="mu-latest-course-single-contbottom">
-			<a class="mu-course-details" href="@Model.GetValue("Title")">Details</a>
+			<a class="mu-course-details" href="@HtmlHelpers.ActionLink("Course", "Index", "CourseDetail", new Dictionary<string, string> { { "title", Utils.EncodeDetailTitle(@Model.GetValue("Title").ToString()) } })">Details</a>
 			<span class="mu-course-price" href="#">@Model.GetValue("Price")</span>
 		</div>
 	</div>

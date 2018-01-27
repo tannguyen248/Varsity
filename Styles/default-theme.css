@@ -80,17 +80,17 @@ Author URI : http://www.markups.io/
   color: #01bafd;
 }
 
-#mu-our-teacher .mu-our-teacher-area .mu-our-teacher-content .mu-our-teacher-single .mu-our-teacher-img .mu-our-teacher-social {
+.mu-our-teacher .mu-our-teacher-area .mu-our-teacher-content .mu-our-teacher-single .mu-our-teacher-img .mu-our-teacher-social {
   background-color: #01bafd;
 }
-#mu-our-teacher .mu-our-teacher-area .mu-our-teacher-content .mu-our-teacher-single .mu-our-teacher-img .mu-our-teacher-social a:hover, #mu-our-teacher .mu-our-teacher-area .mu-our-teacher-content .mu-our-teacher-single .mu-our-teacher-img .mu-our-teacher-social a:focus {
+.mu-our-teacher .mu-our-teacher-area .mu-our-teacher-content .mu-our-teacher-single .mu-our-teacher-img .mu-our-teacher-social a:hover, .mu-our-teacher .mu-our-teacher-area .mu-our-teacher-content .mu-our-teacher-single .mu-our-teacher-img .mu-our-teacher-social a:focus {
   color: #01bafd;
 }
 
-#mu-testimonial .mu-testimonial-area .mu-testimonial-content .mu-testimonial-item .mu-testimonial-info span {
+.mu-testimonial .mu-testimonial-area .mu-testimonial-content .mu-testimonial-item .mu-testimonial-info span {
   color: #01bafd;
 }
-#mu-testimonial .mu-testimonial-area .mu-testimonial-content .slick-dots .slick-active {
+.mu-testimonial .mu-testimonial-area .mu-testimonial-content .slick-dots .slick-active {
   background-color: #01bafd;
 }
 
@@ -196,22 +196,22 @@ Author URI : http://www.markups.io/
   color: #01bafd;
 }
 
-#mu-gallery .mu-gallery-area .mu-gallery-content {
+.mu-gallery .mu-gallery-area .mu-gallery-content {
   width: 100%;
 }
-#mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul li {
+.mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul li {
   background-color: #01bafd;
   border: 1px solid #01bafd;
 }
-#mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul li:hover, #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul li:focus {
+.mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul li:hover, .mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul li:focus {
   color: #01bafd;
   border-color: #01bafd;
 }
-#mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul .active {
+.mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-top ul .active {
   color: #01bafd;
   border-color: #01bafd;
 }
-#mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body ul li .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info .mu-single-gallery-info-inner a {
+.mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body ul li .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info .mu-single-gallery-info-inner a {
   background-color: #01bafd;
 }
 

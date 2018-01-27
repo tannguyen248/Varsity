@@ -27,6 +27,18 @@ namespace ASP
     using System.Web.UI;
     using System.Web.WebPages;
     
+    #line 2 "..\..\MVC\Views\Navigation\Default.cshtml"
+    using Telerik.Sitefinity.Modules.Pages;
+    
+    #line default
+    #line hidden
+    
+    #line 3 "..\..\MVC\Views\Navigation\Default.cshtml"
+    using Telerik.Sitefinity.Pages.Model;
+    
+    #line default
+    #line hidden
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/MVC/Views/Navigation/Default.cshtml")]
     public partial class _MVC_Views_Navigation_Default_cshtml : System.Web.Mvc.WebViewPage<IList<SitefinityWebApp.Mvc.Models.NavigationModel>>
@@ -36,7 +48,75 @@ namespace ASP
         }
         public override void Execute()
         {
-WriteLiteral("<section");
+WriteLiteral("\r\n");
+
+            
+            #line 5 "..\..\MVC\Views\Navigation\Default.cshtml"
+  
+	var pages = ViewBag.Pages as List<string>;
+	SiteMapNode currentNode = SiteMap.CurrentNode;
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\t<h1>");
+
+            
+            #line 8 "..\..\MVC\Views\Navigation\Default.cshtml"
+   Write(pages.Count);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</h1>\r\n");
+
+WriteLiteral("\t<h1>");
+
+            
+            #line 9 "..\..\MVC\Views\Navigation\Default.cshtml"
+   Write(currentNode.Title);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</h1>\r\n");
+
+WriteLiteral("\t<br/>\r\n");
+
+            
+            #line 11 "..\..\MVC\Views\Navigation\Default.cshtml"
+	foreach (var page in pages)
+	{
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\t\t<h6>");
+
+            
+            #line 13 "..\..\MVC\Views\Navigation\Default.cshtml"
+       Write(page);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</h6>\r\n");
+
+            
+            #line 14 "..\..\MVC\Views\Navigation\Default.cshtml"
+		
+            
+            #line default
+            #line hidden
+            
+            #line 18 "..\..\MVC\Views\Navigation\Default.cshtml"
+                                              
+	}
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n\r\n<section");
 
 WriteLiteral(" id=\"mu-menu\"");
 
@@ -94,19 +174,9 @@ WriteLiteral("><i");
 
 WriteLiteral(" class=\"fa fa-university\"");
 
-WriteLiteral("></i><span>Varsity</span></a>\r\n\t\t\t\t<!-- IMG BASED LOGO\t-->\r\n\t\t\t\t<!-- <a");
-
-WriteLiteral(" class=\"navbar-brand\"");
-
-WriteLiteral(" href=\"index.html\"");
-
-WriteLiteral("><img");
-
-WriteLiteral(" src=\"assets/img/logo.png\"");
-
-WriteLiteral(" alt=\"logo\"");
-
-WriteLiteral("></a> -->\r\n\t\t\t</div>\r\n\t\t\t<div");
+WriteLiteral("></i><span>Varsity</span></a>\r\n\t\t\t\t<!-- IMG BASED LOGO\t-->\r\n\t\t\t\t<!-- <a class=\"na" +
+"vbar-brand\" href=\"index.html\"><img src=\"assets/img/logo.png\" alt=\"logo\"></a> -->" +
+"\r\n\t\t\t</div>\r\n\t\t\t<div");
 
 WriteLiteral(" id=\"navbar\"");
 
@@ -121,14 +191,14 @@ WriteLiteral(" class=\"nav navbar-nav navbar-right main-nav\"");
 WriteLiteral(">\r\n");
 
             
-            #line 22 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 42 "..\..\MVC\Views\Navigation\Default.cshtml"
 					
             
             #line default
             #line hidden
             
-            #line 22 "..\..\MVC\Views\Navigation\Default.cshtml"
-      for (var i = 0; i < Model.Count; i++)
+            #line 42 "..\..\MVC\Views\Navigation\Default.cshtml"
+                     for (var i = 0; i < Model.Count; i++)
 					{
 						var item = Model.ElementAtOrDefault(i);
 						if (item.Children == null || !item.Children.Any())
@@ -140,33 +210,33 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("\t\t\t\t\t\t\t<li");
 
-WriteAttribute("class", Tuple.Create(" class=", 1176), Tuple.Create("", 1218)
+WriteAttribute("class", Tuple.Create(" class=", 1692), Tuple.Create("", 1734)
             
-            #line 28 "..\..\MVC\Views\Navigation\Default.cshtml"
-, Tuple.Create(Tuple.Create("", 1183), Tuple.Create<System.Object, System.Int32>(i == 0 ? "active" : string.Empty
+            #line 48 "..\..\MVC\Views\Navigation\Default.cshtml"
+, Tuple.Create(Tuple.Create("", 1699), Tuple.Create<System.Object, System.Int32>(i == 0 ? "active" : string.Empty
             
             #line default
             #line hidden
-, 1183), false)
+, 1699), false)
 );
 
 WriteLiteral("><a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1221), Tuple.Create("\"", 1238)
+WriteAttribute("href", Tuple.Create(" href=\"", 1737), Tuple.Create("\"", 1754)
             
-            #line 28 "..\..\MVC\Views\Navigation\Default.cshtml"
-, Tuple.Create(Tuple.Create("", 1228), Tuple.Create<System.Object, System.Int32>(item.Link
+            #line 48 "..\..\MVC\Views\Navigation\Default.cshtml"
+   , Tuple.Create(Tuple.Create("", 1744), Tuple.Create<System.Object, System.Int32>(item.Link
             
             #line default
             #line hidden
-, 1228), false)
+, 1744), false)
 );
 
 WriteLiteral(">");
 
             
-            #line 28 "..\..\MVC\Views\Navigation\Default.cshtml"
-                                                                     Write(item.DisplayText);
+            #line 48 "..\..\MVC\Views\Navigation\Default.cshtml"
+                                                                                          Write(item.DisplayText);
 
             
             #line default
@@ -174,7 +244,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\r\n");
 
             
-            #line 29 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 49 "..\..\MVC\Views\Navigation\Default.cshtml"
 						}
 						else
 						{
@@ -197,8 +267,8 @@ WriteLiteral(" data-toggle=\"dropdown\"");
 WriteLiteral(">");
 
             
-            #line 33 "..\..\MVC\Views\Navigation\Default.cshtml"
-                                                              Write(item.DisplayText);
+            #line 53 "..\..\MVC\Views\Navigation\Default.cshtml"
+                                                                                      Write(item.DisplayText);
 
             
             #line default
@@ -216,14 +286,14 @@ WriteLiteral(" role=\"menu\"");
 WriteLiteral(">\r\n");
 
             
-            #line 35 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 55 "..\..\MVC\Views\Navigation\Default.cshtml"
 									
             
             #line default
             #line hidden
             
-            #line 35 "..\..\MVC\Views\Navigation\Default.cshtml"
-          for (var j = 0; j < item.Children.Count; j++)
+            #line 55 "..\..\MVC\Views\Navigation\Default.cshtml"
+                                     for (var j = 0; j < item.Children.Count; j++)
 									{
 										var childItem = item.Children.ElementAtOrDefault(j);
 
@@ -232,21 +302,21 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("\t\t\t\t\t\t\t\t\t\t<li><a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1653), Tuple.Create("\"", 1675)
+WriteAttribute("href", Tuple.Create(" href=\"", 2169), Tuple.Create("\"", 2191)
             
-            #line 38 "..\..\MVC\Views\Navigation\Default.cshtml"
-, Tuple.Create(Tuple.Create("", 1660), Tuple.Create<System.Object, System.Int32>(childItem.Link
+            #line 58 "..\..\MVC\Views\Navigation\Default.cshtml"
+, Tuple.Create(Tuple.Create("", 2176), Tuple.Create<System.Object, System.Int32>(childItem.Link
             
             #line default
             #line hidden
-, 1660), false)
+, 2176), false)
 );
 
 WriteLiteral(">");
 
             
-            #line 38 "..\..\MVC\Views\Navigation\Default.cshtml"
-                                   Write(childItem.DisplayText);
+            #line 58 "..\..\MVC\Views\Navigation\Default.cshtml"
+                                                                 Write(childItem.DisplayText);
 
             
             #line default
@@ -254,7 +324,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\r\n");
 
             
-            #line 39 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 59 "..\..\MVC\Views\Navigation\Default.cshtml"
 									}
 
             
@@ -263,7 +333,7 @@ WriteLiteral("</a></li>\r\n");
 WriteLiteral("\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t</li>\r\n");
 
             
-            #line 42 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 62 "..\..\MVC\Views\Navigation\Default.cshtml"
 						}
 					}
 

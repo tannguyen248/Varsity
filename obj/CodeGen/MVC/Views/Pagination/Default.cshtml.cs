@@ -97,7 +97,7 @@ WriteLiteral(">\r\n");
             #line hidden
             
             #line 10 "..\..\MVC\Views\Pagination\Default.cshtml"
-   foreach (var item in Model.ContentItems)
+         foreach (var item in Model.ContentItems)
 		{
 
             
@@ -121,7 +121,7 @@ WriteLiteral("\t\t\t\t");
 
             
             #line 13 "..\..\MVC\Views\Pagination\Default.cshtml"
-Write(Html.Raw(item.Content.Value));
+           Write(Html.Raw(item.Content.Value));
 
             
             #line default
@@ -184,7 +184,7 @@ WriteLiteral("></span> Prev\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n");
             #line hidden
             
             #line 27 "..\..\MVC\Views\Pagination\Default.cshtml"
-    for (var i = 0; i < Model.MaxPage; i++)
+             for (var i = 0; i < Model.MaxPage; i++)
 			{
 
             
@@ -202,7 +202,7 @@ WriteLiteral(">");
 
             
             #line 29 "..\..\MVC\Views\Pagination\Default.cshtml"
-                               Write(i + 1);
+                                           Write(i + 1);
 
             
             #line default

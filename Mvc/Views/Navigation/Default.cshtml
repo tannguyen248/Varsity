@@ -1,4 +1,24 @@
 @model  IList<SitefinityWebApp.Mvc.Models.NavigationModel>
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Pages.Model;
+
+@{
+	var pages = ViewBag.Pages as List<string>;
+	SiteMapNode currentNode = SiteMap.CurrentNode;
+	<h1>@pages.Count</h1>
+	<h1>@currentNode.Title</h1>
+	<br/>
+	foreach (var page in pages)
+	{
+		<h6>@page</h6>
+		@*<h6>@page.Title.Value</h6>
+		<h6>@page.Urls.FirstOrDefault()?.Url</h6>
+		<h6>@page.Nodes.FirstOrDefault()?.Title.Value</h6>
+		<h6>@page.Parent?.Title.Value</h6>
+		<h6>@page.RootNode?.Title.Value</h6>*@
+	}
+}
+
 
 <section id="mu-menu">
 	<nav class="navbar navbar-default" role="navigation">

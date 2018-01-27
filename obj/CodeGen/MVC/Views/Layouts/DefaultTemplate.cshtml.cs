@@ -87,11 +87,43 @@ WriteLiteral(" type=\'text/css\'");
 
 WriteLiteral(">\r\n");
 
+            
+            #line 15 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+		
+            
+            #line default
+            #line hidden
+            
+            #line 15 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+         if (!SitefinityContext.IsBackend)
+		{
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\t\t\t<link");
+
+WriteAttribute("href", Tuple.Create(" href=\"", 612), Tuple.Create("\"", 641)
+, Tuple.Create(Tuple.Create("", 619), Tuple.Create<System.Object, System.Int32>(Href("~/Styles/bootstrap.css")
+, 619), false)
+);
+
+WriteLiteral(" rel=\"stylesheet\"");
+
+WriteLiteral(" />\r\n");
+
+            
+            #line 18 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+		}
+
+            
+            #line default
+            #line hidden
 WriteLiteral("\t\t");
 
             
-            #line 15 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-Write(Styles.Render("~/Styles/master"));
+            #line 19 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+   Write(Styles.Render("~/Styles/master"));
 
             
             #line default
@@ -109,41 +141,30 @@ WriteLiteral(" class=\"fa fa-angle-up\"");
 WriteLiteral("></i>\r\n\t\t</a>\r\n\t\t<!-- END SCROLL TOP BUTTON -->\r\n\r\n");
 
             
-            #line 24 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+            #line 28 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
 		
             
             #line default
             #line hidden
             
-            #line 24 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-   if (!SitefinityContext.IsBackend)
+            #line 28 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+         if (!SitefinityContext.IsBackend)
 		{
 
             
             #line default
             #line hidden
-WriteLiteral("\t\t\t<link");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 818), Tuple.Create("\"", 847)
-, Tuple.Create(Tuple.Create("", 825), Tuple.Create<System.Object, System.Int32>(Href("~/Styles/bootstrap.css")
-, 825), false)
-);
-
-WriteLiteral(" rel=\"stylesheet\"");
-
-WriteLiteral(" />\r\n");
-
 WriteLiteral("\t\t\t<script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 880), Tuple.Create("\"", 909)
-, Tuple.Create(Tuple.Create("", 886), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/jquery.min.js")
-, 886), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 928), Tuple.Create("\"", 957)
+, Tuple.Create(Tuple.Create("", 934), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/jquery.min.js")
+, 934), false)
 );
 
 WriteLiteral("></script>\r\n");
 
             
-            #line 28 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+            #line 31 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
 		}
 
             
@@ -154,8 +175,8 @@ WriteLiteral("\t\t\r\n");
 WriteLiteral("\t\t");
 
             
-            #line 30 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-Write(Scripts.Render("~/bundles/master"));
+            #line 33 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+   Write(Scripts.Render("~/bundles/master"));
 
             
             #line default
@@ -171,41 +192,8 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t");
 
             
-            #line 33 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-Write(Html.SfPlaceHolder("headerPlaceholder"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("\t\t\t");
-
-            
-            #line 34 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-Write(Html.SfPlaceHolder("navBarPlaceholder"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("\t\t\t");
-
-            
-            #line 35 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-Write(Html.SfPlaceHolder("breadcrumbPlaceHolder"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("\t\t\t");
-
-            
             #line 36 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-Write(Html.SfPlaceHolder("contentPlaceholder"));
+       Write(Html.SfPlaceHolder("headerPlaceholder"));
 
             
             #line default
@@ -216,7 +204,40 @@ WriteLiteral("\t\t\t");
 
             
             #line 37 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-Write(Html.SfPlaceHolder("footerPlaceholder"));
+       Write(Html.SfPlaceHolder("navBarPlaceholder"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("\t\t\t");
+
+            
+            #line 38 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+       Write(Html.SfPlaceHolder("breadcrumbPlaceHolder"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("\t\t\t");
+
+            
+            #line 39 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+       Write(Html.SfPlaceHolder("contentPlaceholder"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("\t\t\t");
+
+            
+            #line 40 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
+       Write(Html.SfPlaceHolder("footerPlaceholder"));
 
             
             #line default

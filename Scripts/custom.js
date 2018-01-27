@@ -78,7 +78,7 @@ jQuery(function($){
   /*  4. ABOUT US (SLICK SLIDER)
   /* ----------------------------------------------------------- */      
 
-    jQuery('#mu-testimonial-slide').slick({
+    jQuery('.mu-testimonial-slide').slick({
       dots: true,
       infinite: true,
       arrows: false,
@@ -142,7 +142,7 @@ jQuery(function($){
       autoplay: true,
       speed: 500,      
       cssEase: 'linear'
-    });       
+    });
 
   /* ----------------------------------------------------------- */
   /*  7. COUNTER
