@@ -1,24 +1,10 @@
-@model  IList<SitefinityWebApp.Mvc.Models.NavigationModel>
-@using Telerik.Sitefinity.Modules.Pages;
-@using Telerik.Sitefinity.Pages.Model;
-
-@{
-	var pages = ViewBag.Pages as List<string>;
-	SiteMapNode currentNode = SiteMap.CurrentNode;
-	<h1>@pages.Count</h1>
-	<h1>@currentNode.Title</h1>
-	<br/>
-	foreach (var page in pages)
-	{
-		<h6>@page</h6>
-		@*<h6>@page.Title.Value</h6>
-		<h6>@page.Urls.FirstOrDefault()?.Url</h6>
-		<h6>@page.Nodes.FirstOrDefault()?.Title.Value</h6>
-		<h6>@page.Parent?.Title.Value</h6>
-		<h6>@page.RootNode?.Title.Value</h6>*@
-	}
-}
-
+@model  List<SiteMapNode>
+@using System.Web
+@using Telerik.Sitefinity.Modules.Pages
+@using Telerik.Sitefinity.Pages.Model
+@using Telerik.Sitefinity.Web
+@using System.Linq
+@using SitefinityWebApp.Utilities
 
 <section id="mu-menu">
 	<nav class="navbar navbar-default" role="navigation">
@@ -39,23 +25,25 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-					@for (var i = 0; i < Model.Count; i++)
+					
+					@foreach (SiteMapNode node in Model)
 					{
-						var item = Model.ElementAtOrDefault(i);
-						if (item.Children == null || !item.Children.Any())
+						if (!node.HasChildNodes)
 						{
-
-							<li class=@(i == 0 ? "active" : string.Empty)><a href="@item.Link">@item.DisplayText</a></li>
+							<li class=@(HtmlHelpers.IsActiveNode(node, Request.RawUrl) ? "active" : string.Empty)>
+								<a href="@Url.Content(node.Url)">@node.Title</a>
+							</li>
 						}
 						else
 						{
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">@item.DisplayText<span class="fa fa-angle-down"></span></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									@node.Title<span class="fa fa-angle-down"></span>
+								</a>
 								<ul class="dropdown-menu" role="menu">
-									@for (var j = 0; j < item.Children.Count; j++)
+									@foreach (SiteMapNode childNode in node.ChildNodes)
 									{
-										var childItem = item.Children.ElementAtOrDefault(j);
-										<li><a href="@childItem.Link">@childItem.DisplayText</a></li>
+										<li><a href="@Url.Content(childNode.Url)">@childNode.Title</a></li>
 									}
 								</ul>
 							</li>
@@ -68,7 +56,7 @@
 	</nav>
 </section>
 
-  <!-- Start search box -->
+<!-- Start search box -->
 <div id="mu-search">
 	<div class="mu-search-area">
 		<button class="mu-search-close"><span class="fa fa-close"></span></button>

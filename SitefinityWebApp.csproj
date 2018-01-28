@@ -1099,6 +1099,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mvc\Controllers\BreadcrumbController.cs" />
+    <Compile Include="Mvc\Controllers\FooterController.cs" />
+    <Compile Include="Mvc\Controllers\HeaderController.cs" />
+    <Compile Include="Mvc\Models\BreadcrumbModel.cs" />
     <Compile Include="Utilities\HtmlHelpers.cs" />
     <Compile Include="Mvc\Controllers\CourseArchiveController.cs" />
     <Compile Include="Mvc\Controllers\CourseDetailController.cs" />
@@ -1570,6 +1574,10 @@
     <Content Include="Mvc\Views\Shared\_SliderTileCourse.cshtml" />
     <Content Include="Mvc\Views\Slider\Course.cshtml" />
     <Content Include="Mvc\Views\CourseArchive\Index.cshtml" />
+    <Content Include="Mvc\Views\Layouts\_MVCLayout.cshtml" />
+    <Content Include="Mvc\Views\Footer\Default.cshtml" />
+    <Content Include="Mvc\Views\Header\Default.cshtml" />
+    <Content Include="Mvc\Views\Breadcrumb\Default.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -20,5 +20,22 @@ namespace SitefinityWebApp.Utilities
             var link = $"/{prefix}/{controllerName}/{actionName}/{strBuilder.ToString().TrimEnd('&')}";
             return new MvcHtmlString(link);
         }
+
+        public static bool IsActiveNode(SiteMapNode node, string currentUrl)
+        {
+            var childNodes = node.ChildNodes.Cast<SiteMapNode>();
+            var urls = childNodes.Select(x => x.Url.ToLower()).ToList();
+            urls.Add(node.Url.ToLower());
+
+            foreach(var url in urls)
+            {
+                if (url.Contains(currentUrl.ToLower()))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

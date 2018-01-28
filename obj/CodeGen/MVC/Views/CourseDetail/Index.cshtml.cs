@@ -22,24 +22,24 @@ namespace ASP
     using System.Web.Mvc;
     using System.Web.Mvc.Ajax;
     using System.Web.Mvc.Html;
-    
-    #line 7 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-    using System.Web.Optimization;
-    
-    #line default
-    #line hidden
     using System.Web.Routing;
     using System.Web.Security;
     using System.Web.UI;
     using System.Web.WebPages;
     
-    #line 6 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-    using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+    #line 8 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+    using SitefinityWebApp.Mvc.Models;
     
     #line default
     #line hidden
     
-    #line 5 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+    #line 6 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+    using Telerik.Sitefinity.DynamicModules.Model;
+    
+    #line default
+    #line hidden
+    
+    #line 7 "..\..\MVC\Views\CourseDetail\Index.cshtml"
     using Telerik.Sitefinity.Model;
     
     #line default
@@ -47,8 +47,99 @@ namespace ASP
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/MVC/Views/CourseDetail/Index.cshtml")]
-    public partial class _MVC_Views_CourseDetail_Index_cshtml : System.Web.Mvc.WebViewPage<Telerik.Sitefinity.DynamicModules.Model.DynamicContent>
+    public partial class _MVC_Views_CourseDetail_Index_cshtml : System.Web.Mvc.WebViewPage<CourseDetailModel>
     {
+
+#line 100 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+public System.Web.WebPages.HelperResult RenderRelatedCourses(List<DynamicContent> relatedCourses) {
+#line default
+#line hidden
+return new System.Web.WebPages.HelperResult(__razor_helper_writer => {
+
+#line 100 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                                   
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"row\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"col-md-12\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"mu-related-item\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t\t\t<h3>Related Courses</h3>\r\n\t\t\t\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"mu-related-item-area\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t\t\t\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " id=\"mu-related-item-slide\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n");
+
+
+#line 107 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+						
+
+#line default
+#line hidden
+
+#line 107 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                         foreach (var course in relatedCourses)
+						{
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\t\t\t\t\t\t\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"col-md-6\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n");
+
+
+#line 110 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+								
+
+#line default
+#line hidden
+
+#line 110 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                   Html.RenderPartial("_SliderTileCourse", course); 
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\r\n\t\t\t\t\t\t\t</div>\r\n");
+
+
+#line 112 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+						}
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n");
+
+
+#line 118 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+
+
+#line default
+#line hidden
+});
+
+#line 118 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+}
+#line default
+#line hidden
+
         public _MVC_Views_CourseDetail_Index_cshtml()
         {
         }
@@ -57,110 +148,30 @@ namespace ASP
             
             #line 1 "..\..\MVC\Views\CourseDetail\Index.cshtml"
   
-	Layout = null;
+	Layout = "~/MVC/Views/Layouts/_MVCLayout.cshtml";
+	Page.Title = "Course Archive";
 
             
             #line default
             #line hidden
 WriteLiteral("\r\n\r\n");
 
-            
-            #line 10 "..\..\MVC\Views\CourseDetail\Index.cshtml"
- if (!SitefinityContext.IsBackend)
-{
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\t<link");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 249), Tuple.Create("\"", 278)
-, Tuple.Create(Tuple.Create("", 256), Tuple.Create<System.Object, System.Int32>(Href("~/Styles/bootstrap.css")
-, 256), false)
-);
-
-WriteLiteral(" rel=\"stylesheet\"");
-
-WriteLiteral(" />\r\n");
-
-            
-            #line 13 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-}
-
-            
-            #line default
-            #line hidden
-            
-            #line 14 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-Write(Styles.Render("~/Styles/master"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\r\n");
-
-            
-            #line 16 "..\..\MVC\Views\CourseDetail\Index.cshtml"
- if (!SitefinityContext.IsBackend)
-{
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\t<script");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 388), Tuple.Create("\"", 417)
-, Tuple.Create(Tuple.Create("", 394), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/jquery.min.js")
-, 394), false)
-);
-
-WriteLiteral("></script>\r\n");
-
-            
-            #line 19 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-}
-
-            
-            #line default
-            #line hidden
 WriteLiteral("\r\n");
 
             
-            #line 21 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-Write(Scripts.Render("~/bundles/master"));
+            #line 12 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+   
+	var courseDetail = Model.CourseDetail;
+	var relatedCourses = Model.RelatedCourses;
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<section");
-
-WriteLiteral(" class=\"mu-course-content\"");
-
-WriteLiteral(">\r\n\t<div");
-
-WriteLiteral(" class=\"container\"");
-
-WriteLiteral(">\r\n\t\t<div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-12\"");
-
-WriteLiteral(">\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-course-content-area\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t<div");
+WriteLiteral("\r\n\r\n<div");
 
 WriteLiteral(" class=\"col-md-9\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t<!-- start course content container -->\r\n\t\t\t\t\t\t\t<div");
+WriteLiteral(">\r\n\t<div");
 
 WriteLiteral(" class=\"mu-course-container mu-course-details\"");
 
@@ -186,14 +197,14 @@ WriteLiteral(" href=\"#\"");
 
 WriteLiteral("><img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 978), Tuple.Create("\"", 1012)
+WriteAttribute("src", Tuple.Create(" src=\"", 603), Tuple.Create("\"", 644)
             
-            #line 36 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 984), Tuple.Create<System.Object, System.Int32>(Model.GetValue("ImageLink")
+            #line 23 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 609), Tuple.Create<System.Object, System.Int32>(courseDetail.GetValue("ImageLink")
             
             #line default
             #line hidden
-, 984), false)
+, 609), false)
 );
 
 WriteLiteral(" alt=\"img\"");
@@ -209,8 +220,8 @@ WriteLiteral(" href=\"#\"");
 WriteLiteral(">");
 
             
-            #line 38 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                           Write(Model.GetValue("Type"));
+            #line 25 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                           Write(courseDetail.GetValue("Type"));
 
             
             #line default
@@ -222,8 +233,8 @@ WriteLiteral(" class=\"fa fa-clock-o\"");
 WriteLiteral("></i>");
 
             
-            #line 39 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                  Write(Model.GetValue("Days"));
+            #line 26 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                                                  Write(courseDetail.GetValue("Days"));
 
             
             #line default
@@ -239,8 +250,8 @@ WriteLiteral(" href=\"#\"");
 WriteLiteral(">");
 
             
-            #line 43 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                           Write(Model.GetValue("DisplayTitle"));
+            #line 30 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                           Write(courseDetail.GetValue("DisplayTitle"));
 
             
             #line default
@@ -249,8 +260,8 @@ WriteLiteral("</a></h2>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<h4>Course Information</h4>\r
 "\t\t<li> <span>Course Price</span> <span>");
 
             
-            #line 46 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                    Write(Model.GetValue("Price"));
+            #line 33 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                                                    Write(courseDetail.GetValue("Price"));
 
             
             #line default
@@ -258,8 +269,8 @@ WriteLiteral("</a></h2>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<h4>Course Information</h4>\r
 WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Place</span> <span>");
 
             
-            #line 47 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                             Write(Model.GetValue("Place"));
+            #line 34 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                                             Write(courseDetail.GetValue("Place"));
 
             
             #line default
@@ -267,8 +278,8 @@ WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Place</span> 
 WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Total Students</span> <span>");
 
             
-            #line 48 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                      Write(Model.GetValue("TotalStudent"));
+            #line 35 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                                                      Write(courseDetail.GetValue("TotalStudent"));
 
             
             #line default
@@ -276,8 +287,8 @@ WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Total Student
 WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Course Duration</span> <span>");
 
             
-            #line 49 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                       Write(Model.GetValue("CourseDuration"));
+            #line 36 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                                                       Write(courseDetail.GetValue("CourseDuration"));
 
             
             #line default
@@ -285,8 +296,8 @@ WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Course Durati
 WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Course Start</span> <span>");
 
             
-            #line 50 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                    Write(Model.GetValue("CourseStart"));
+            #line 37 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                                                    Write(courseDetail.GetValue("CourseStart"));
 
             
             #line default
@@ -296,8 +307,8 @@ WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t\t\
 WriteLiteral("\t\t\t\t\t\t\t\t\t\t\t\t");
 
             
-            #line 53 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                           Write(Html.Raw(Model.GetValue("LongDescription")));
+            #line 40 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                           Write(Html.Raw(courseDetail.GetValue("LongDescription")));
 
             
             #line default
@@ -329,293 +340,18 @@ WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<thead>\r\n\t\t\t\t\t\t\t\t\t\t\t
 ":30 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 13:80 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> - </td>\r\n\t\t\t\t\t" +
 "\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</di" +
 "v>\r\n\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t" +
-"\t</div>\r\n\t\t\t\t\t\t\t<!-- end course content container -->\r\n\t\t\t\t\t\t\t<!-- start related" +
-" course item -->\r\n\t\t\t\t\t\t\t<div");
+"\t</div>\r\n");
 
-WriteLiteral(" class=\"row\"");
+WriteLiteral("\t");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t<div");
+            
+            #line 97 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+Write(RenderRelatedCourses(relatedCourses));
 
-WriteLiteral(" class=\"col-md-12\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-related-item\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t<h3>Related Courses</h3>\r\n\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-related-item-area\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" id=\"mu-related-item-slide\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-6\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figure");
-
-WriteLiteral(" class=\"mu-latest-course-img\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral("><img");
-
-WriteLiteral(" alt=\"img\"");
-
-WriteLiteral(" src=\"Contents/Images/courses/1.jpg\"");
-
-WriteLiteral("></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figcaption");
-
-WriteLiteral(" class=\"mu-latest-course-imgcaption\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Drawing</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span><i");
-
-WriteLiteral(" class=\"fa fa-clock-o\"");
-
-WriteLiteral("></i>90Days</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figcaption>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figure>\r\n\t\t\t\t\t\t" +
-"\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-content\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Lorem ipsum dolor sit amet.</a></h4>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit am" +
-"et, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obc" +
-"aecati architecto quidem ullam quia.</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-contbottom\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-details\"");
-
-WriteLiteral(">Details</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-price\"");
-
-WriteLiteral(">$165.00</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>" +
-"\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-6\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figure");
-
-WriteLiteral(" class=\"mu-latest-course-img\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral("><img");
-
-WriteLiteral(" alt=\"img\"");
-
-WriteLiteral(" src=\"Contents/Images/courses/2.jpg\"");
-
-WriteLiteral("></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figcaption");
-
-WriteLiteral(" class=\"mu-latest-course-imgcaption\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Drawing</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span><i");
-
-WriteLiteral(" class=\"fa fa-clock-o\"");
-
-WriteLiteral("></i>90Days</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figcaption>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figure>\r\n\t\t\t\t\t\t" +
-"\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-content\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Lorem ipsum dolor sit amet.</a></h4>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit am" +
-"et, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obc" +
-"aecati architecto quidem ullam quia.</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-contbottom\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-details\"");
-
-WriteLiteral(">Details</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-price\"");
-
-WriteLiteral(">$165.00</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>" +
-"\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-6\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figure");
-
-WriteLiteral(" class=\"mu-latest-course-img\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral("><img");
-
-WriteLiteral(" alt=\"img\"");
-
-WriteLiteral(" src=\"Contents/Images/courses/3.jpg\"");
-
-WriteLiteral("></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figcaption");
-
-WriteLiteral(" class=\"mu-latest-course-imgcaption\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Drawing</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span><i");
-
-WriteLiteral(" class=\"fa fa-clock-o\"");
-
-WriteLiteral("></i>90Days</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figcaption>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figure>\r\n\t\t\t\t\t\t" +
-"\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-content\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Lorem ipsum dolor sit amet.</a></h4>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit am" +
-"et, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obc" +
-"aecati architecto quidem ullam quia.</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-contbottom\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-details\"");
-
-WriteLiteral(">Details</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-price\"");
-
-WriteLiteral(">$165.00</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>" +
-"\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-6\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figure");
-
-WriteLiteral(" class=\"mu-latest-course-img\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral("><img");
-
-WriteLiteral(" alt=\"img\"");
-
-WriteLiteral(" src=\"Contents/Images/courses/1.jpg\"");
-
-WriteLiteral("></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<figcaption");
-
-WriteLiteral(" class=\"mu-latest-course-imgcaption\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Drawing</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span><i");
-
-WriteLiteral(" class=\"fa fa-clock-o\"");
-
-WriteLiteral("></i>90Days</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figcaption>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</figure>\r\n\t\t\t\t\t\t" +
-"\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-content\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">Lorem ipsum dolor sit amet.</a></h4>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit am" +
-"et, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obc" +
-"aecati architecto quidem ullam quia.</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-contbottom\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-details\"");
-
-WriteLiteral(">Details</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" class=\"mu-course-price\"");
-
-WriteLiteral(@">$165.00</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- end start related course item -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-");
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>\r\n\r\n");
 
         }
     }

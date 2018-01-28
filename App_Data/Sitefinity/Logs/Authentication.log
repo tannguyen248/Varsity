@@ -1,40 +1,9 @@
 ----------------------------------------
-ActivityId: 7601b794-956e-4d00-a3d3-ee24f28c1ee0
+ActivityId: 99d787cf-87f2-4cf2-9634-73ec4c9b1df8
 
-Timestamp: 1/22/2018 10:57:49 AM
+Timestamp: 1/27/2018 7:48:06 AM
 
-Message: Identity Server: NoSignInCookie
-
-Category: Authentication
-
-Priority: -1
-
-EventId: 1
-
-Severity: Information
-
-Title:
-
-Machine: CPL17H2
-
-App Domain: /LM/W3SVC/1/ROOT-1-131610920990354940
-
-ProcessId: 2072
-
-Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:16620
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-ActivityId: b6af3e6b-8ed3-4c72-8bf8-8495518b92da
-
-Timestamp: 1/22/2018 10:57:52 AM
-
-Message: Identity Server: NoSignInCookie
+Message: User login failed with exception: IDX10311: RequireNonce is 'true' (default) but validationContext.Nonce is null. A nonce cannot be validated. If you don't need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to 'false'.
 
 Category: Authentication
 
@@ -48,15 +17,15 @@ Title:
 
 Machine: CPL17H2
 
-App Domain: /LM/W3SVC/1/ROOT-1-131610920990354940
+App Domain: /LM/W3SVC/1/ROOT-1-131615119569390306
 
-ProcessId: 2072
+ProcessId: 19248
 
 Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:11556
+Win32 ThreadId:17592
 
 Extended Properties: 
 ----------------------------------------

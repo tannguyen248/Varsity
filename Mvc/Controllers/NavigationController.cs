@@ -8,7 +8,9 @@ using System.IO;
 using Telerik.Sitefinity.Modules.Pages;
 using Telerik.Sitefinity.Pages.Model;
 using Telerik.Sitefinity.Web.UI.NavigationControls;
-using Telerik.Sitefinity.SitemapGenerator;
+using Telerik.Sitefinity.Web;
+using Telerik.Sitefinity.Model;
+using System.Web;
 
 namespace SitefinityWebApp.Mvc.Controllers
 {
@@ -20,18 +22,7 @@ namespace SitefinityWebApp.Mvc.Controllers
         /// </summary>
         public ActionResult Index()
         {
-            PageManager pageManager = PageManager.GetManager();
-            var pages = pageManager.GetPageNodes().Where(x => x.ShowInNavigation == true).Select(x => x.GetFullTitlesPath("/")).ToList();
-            ViewBag.Pages = pages;
-            
-
-            return View("Default", GetNavigationItems());
-        }
-
-        private List<NavigationModel> GetNavigationItems()
-        {
-            var data = System.IO.File.ReadAllText(Constant.ConfigurationSource.Navigation);
-            return JsonConvert.DeserializeObject<List<NavigationModel>>(data);
+            return View("Default", Utilities.Utils.GetNavigationNodes());
         }
     }
 }

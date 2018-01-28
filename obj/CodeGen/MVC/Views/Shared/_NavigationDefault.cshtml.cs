@@ -14,16 +14,11 @@ namespace ASP
     using System;
     using System.Collections.Generic;
     using System.IO;
-    
-    #line 6 "..\..\MVC\Views\Navigation\Default.cshtml"
     using System.Linq;
-    
-    #line default
-    #line hidden
     using System.Net;
     using System.Text;
     
-    #line 2 "..\..\MVC\Views\Navigation\Default.cshtml"
+    #line 2 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
     using System.Web;
     
     #line default
@@ -37,40 +32,66 @@ namespace ASP
     using System.Web.UI;
     using System.Web.WebPages;
     
-    #line 7 "..\..\MVC\Views\Navigation\Default.cshtml"
-    using SitefinityWebApp.Utilities;
-    
-    #line default
-    #line hidden
-    
-    #line 3 "..\..\MVC\Views\Navigation\Default.cshtml"
+    #line 3 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
     using Telerik.Sitefinity.Modules.Pages;
     
     #line default
     #line hidden
     
-    #line 4 "..\..\MVC\Views\Navigation\Default.cshtml"
+    #line 4 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
     using Telerik.Sitefinity.Pages.Model;
     
     #line default
     #line hidden
     
-    #line 5 "..\..\MVC\Views\Navigation\Default.cshtml"
+    #line 5 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
     using Telerik.Sitefinity.Web;
     
     #line default
     #line hidden
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
-    [System.Web.WebPages.PageVirtualPathAttribute("~/MVC/Views/Navigation/Default.cshtml")]
-    public partial class _MVC_Views_Navigation_Default_cshtml : System.Web.Mvc.WebViewPage<List<SiteMapNode>>
+    [System.Web.WebPages.PageVirtualPathAttribute("~/MVC/Views/Shared/_NavigationDefault.cshtml")]
+    public partial class _MVC_Views_Shared__NavigationDefault_cshtml : System.Web.Mvc.WebViewPage<List<SiteMapNode>>
     {
-        public _MVC_Views_Navigation_Default_cshtml()
+
+#line 77 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
+public System.Web.WebPages.HelperResult RenderCustomNode() {
+#line default
+#line hidden
+return new System.Web.WebPages.HelperResult(__razor_helper_writer => {
+
+#line 77 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
+                             
+
+
+
+
+#line default
+#line hidden
+});
+
+#line 80 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
+}
+#line default
+#line hidden
+
+        public _MVC_Views_Shared__NavigationDefault_cshtml()
         {
         }
         public override void Execute()
         {
-WriteLiteral("\r\n<section");
+WriteLiteral("\r\n");
+
+            
+            #line 7 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
+  
+	SiteMapNode currentNode = SiteMap.CurrentNode;
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n<section");
 
 WriteLiteral(" id=\"mu-menu\"");
 
@@ -142,16 +163,16 @@ WriteLiteral(" id=\"top-menu\"");
 
 WriteLiteral(" class=\"nav navbar-nav navbar-right main-nav\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\r\n");
+WriteLiteral(">\r\n");
 
             
-            #line 29 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 30 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
 					
             
             #line default
             #line hidden
             
-            #line 29 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 30 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
                      foreach (SiteMapNode node in Model)
 					{
 						if (!node.HasChildNodes)
@@ -162,32 +183,32 @@ WriteLiteral(">\r\n\t\t\t\t\t\r\n");
             #line hidden
 WriteLiteral("\t\t\t\t\t\t\t<li");
 
-WriteAttribute("class", Tuple.Create(" class=", 1258), Tuple.Create("", 1340)
+WriteAttribute("class", Tuple.Create(" class=", 1256), Tuple.Create("", 1319)
             
-            #line 33 "..\..\MVC\Views\Navigation\Default.cshtml"
-, Tuple.Create(Tuple.Create("", 1265), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.IsActiveNode(node, Request.RawUrl) ? "active" : string.Empty
+            #line 34 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
+, Tuple.Create(Tuple.Create("", 1263), Tuple.Create<System.Object, System.Int32>(currentNode.Url == node.Url ? "active" : string.Empty
             
             #line default
             #line hidden
-, 1265), false)
+, 1263), false)
 );
 
 WriteLiteral(">\r\n\t\t\t\t\t\t\t\t<a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1353), Tuple.Create("\"", 1382)
+WriteAttribute("href", Tuple.Create(" href=\"", 1332), Tuple.Create("\"", 1361)
             
-            #line 34 "..\..\MVC\Views\Navigation\Default.cshtml"
-, Tuple.Create(Tuple.Create("", 1360), Tuple.Create<System.Object, System.Int32>(Url.Content(node.Url)
+            #line 35 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
+, Tuple.Create(Tuple.Create("", 1339), Tuple.Create<System.Object, System.Int32>(Url.Content(node.Url)
             
             #line default
             #line hidden
-, 1360), false)
+, 1339), false)
 );
 
 WriteLiteral(">");
 
             
-            #line 34 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 35 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
                                                             Write(node.Title);
 
             
@@ -196,7 +217,7 @@ WriteLiteral(">");
 WriteLiteral("</a>\r\n\t\t\t\t\t\t\t</li>\r\n");
 
             
-            #line 36 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 37 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
 						}
 						else
 						{
@@ -221,7 +242,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t\t\t\t\t\t");
 
             
-            #line 41 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 42 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
                                Write(node.Title);
 
             
@@ -240,13 +261,13 @@ WriteLiteral(" role=\"menu\"");
 WriteLiteral(">\r\n");
 
             
-            #line 44 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 45 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
 									
             
             #line default
             #line hidden
             
-            #line 44 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 45 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
                                      foreach (SiteMapNode childNode in node.ChildNodes)
 									{
 
@@ -255,20 +276,20 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("\t\t\t\t\t\t\t\t\t\t<li><a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1756), Tuple.Create("\"", 1790)
+WriteAttribute("href", Tuple.Create(" href=\"", 1735), Tuple.Create("\"", 1769)
             
-            #line 46 "..\..\MVC\Views\Navigation\Default.cshtml"
-, Tuple.Create(Tuple.Create("", 1763), Tuple.Create<System.Object, System.Int32>(Url.Content(childNode.Url)
+            #line 47 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
+, Tuple.Create(Tuple.Create("", 1742), Tuple.Create<System.Object, System.Int32>(Url.Content(childNode.Url)
             
             #line default
             #line hidden
-, 1763), false)
+, 1742), false)
 );
 
 WriteLiteral(">");
 
             
-            #line 46 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 47 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
                                                                              Write(childNode.Title);
 
             
@@ -277,7 +298,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\r\n");
 
             
-            #line 47 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 48 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
 									}
 
             
@@ -286,7 +307,7 @@ WriteLiteral("</a></li>\r\n");
 WriteLiteral("\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t</li>\r\n");
 
             
-            #line 50 "..\..\MVC\Views\Navigation\Default.cshtml"
+            #line 51 "..\..\MVC\Views\Shared\_NavigationDefault.cshtml"
 						}
 					}
 
@@ -303,8 +324,8 @@ WriteLiteral("><i");
 
 WriteLiteral(" class=\"fa fa-search\"");
 
-WriteLiteral("></i></a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</nav>\r\n</section>\r\n\r\n<!-- Start" +
-" search box -->\r\n<div");
+WriteLiteral("></i></a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</nav>\r\n</section>\r\n\r\n  <!-- Sta" +
+"rt search box -->\r\n<div");
 
 WriteLiteral(" id=\"mu-search\"");
 
@@ -343,7 +364,7 @@ WriteLiteral(" type=\"search\"");
 WriteLiteral(" placeholder=\"Type Your Keyword(s) & Hit Enter\"");
 
 WriteLiteral(">\r\n\t\t\t\t\t</form>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<!-- End searc" +
-"h box -->\r\n");
+"h box -->\r\n\r\n");
 
         }
     }

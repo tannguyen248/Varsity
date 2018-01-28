@@ -22,8 +22,15 @@ namespace SitefinityWebApp.Mvc.Controllers
         public ActionResult Index(string title = "Engineering-Lorem-ipsum-dolor-sit-amet")
         {
             var course = DynamicContentHelpers.GetDynamicContent("Telerik.Sitefinity.DynamicTypes.Model.Course.Course", Utils.DecodeDetailTitle(title)).FirstOrDefault();
+            var courses = DynamicContentHelpers.GetDynamicContent("Telerik.Sitefinity.DynamicTypes.Model.Course.Course");
 
-            return View(course);
+            var model = new CourseDetailModel
+            {
+                CourseDetail = course,
+                RelatedCourses = courses
+            };
+
+            return View(model);
         }
     }
 }
