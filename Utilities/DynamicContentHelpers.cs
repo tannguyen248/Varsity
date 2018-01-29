@@ -15,13 +15,15 @@ namespace SitefinityWebApp.Utilities
         public static List<DynamicContent> GetDynamicContent(string type, string title = "")
         {
             var dynamicModuleManager = DynamicModuleManager.GetManager();
-            var contentType = TypeResolutionService.ResolveType("Telerik.Sitefinity.DynamicTypes.Model.Course.Course");
+            var contentType = TypeResolutionService.ResolveType(type);
             var contentItems = dynamicModuleManager.GetDataItems(contentType)
-                                        .Where(x => x.Status == ContentLifecycleStatus.Live);
+                                        .Where(x => x.Status == ContentLifecycleStatus.Live && x.Visible);
+            
             if (!string.IsNullOrWhiteSpace(title))
             {
                 contentItems = contentItems.Where($"Title.Contains(\"{title}\") && Status=\"Live\"");
             }
+
             return contentItems.ToList();
         }
     }

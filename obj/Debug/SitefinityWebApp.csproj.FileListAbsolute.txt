@@ -1,3 +1,4 @@
+D:\Projects\Learn\Sitefinity\VarsityII\obj\Debug\SitefinityWebApp.csprojResolveAssemblyReference.cache
 D:\Projects\Learn\Sitefinity\VarsityII\bin\SitefinityWebApp.ResourcePackages.Bootstrap.dll
 D:\Projects\Learn\Sitefinity\VarsityII\bin\SitefinityWebApp.ResourcePackages.Bootstrap.pdb
 D:\Projects\Learn\Sitefinity\VarsityII\bin\SitefinityWebApp.dll.config
@@ -25,6 +26,5 @@ D:\Projects\Learn\Sitefinity\VarsityII\bin\System.Web.Razor.xml
 D:\Projects\Learn\Sitefinity\VarsityII\bin\System.Web.WebPages.xml
 D:\Projects\Learn\Sitefinity\VarsityII\bin\System.Web.WebPages.Deployment.xml
 D:\Projects\Learn\Sitefinity\VarsityII\bin\System.Web.WebPages.Razor.xml
-D:\Projects\Learn\Sitefinity\VarsityII\obj\Debug\SitefinityWebApp.csprojResolveAssemblyReference.cache
 D:\Projects\Learn\Sitefinity\VarsityII\obj\Debug\SitefinityWebApp.dll
 D:\Projects\Learn\Sitefinity\VarsityII\obj\Debug\SitefinityWebApp.pdb

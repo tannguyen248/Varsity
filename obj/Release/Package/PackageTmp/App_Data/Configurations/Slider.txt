@@ -1,0 +1,23 @@
+﻿[
+  {
+    "SubHeader": "Welcome To Varsity",
+    "Header": "We Will Help You To Learn",
+    "Descripton": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.",
+    "ImageLink": "/Contents/Images/slider/1.jpg",
+    "ReadMoreLink": "#"
+  },
+  {
+    "SubHeader": "Premiumu Quality Free Template",
+    "Header": "Best Education Template Ever",
+    "Descripton": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.",
+    "ImageLink": "/Contents/Images/slider/2.jpg",
+    "ReadMoreLink": "#"
+  },
+  {
+    "SubHeader": "Exclusivly For Education",
+    "Header": "Education For Everyone",
+    "Descripton": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.",
+    "ImageLink": "/Contents/Images/slider/3.jpg",
+    "ReadMoreLink": "#"
+  },
+]

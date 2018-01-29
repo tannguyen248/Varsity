@@ -58,7 +58,7 @@ WriteLiteral("\r\n\r\n");
    
 	int maxPage = ViewBag.MaxPage;
 	int currentPage = ViewBag.CurrentPage;
-	var pageName = ViewContext.RouteData.Values["controller"].ToString();
+	var pageName = Page.Title as string;
 
             
             #line default
@@ -77,7 +77,7 @@ WriteLiteral("\r\n");
             #line hidden
             
             #line 16 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-       Html.RenderPartial("Breadcrumb"); 
+       Html.RenderPartial("_Breadcrumb", pageName); 
             
             #line default
             #line hidden
@@ -89,11 +89,11 @@ WriteLiteral("\r\n<div");
 
 WriteLiteral(" class=\"col-md-9\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t<!-- start course content container -->\r\n\t\t\t\t\t\t\t<div");
+WriteLiteral(">\r\n\t<!-- start course content container -->\r\n\t<div");
 
 WriteLiteral(" class=\"mu-course-container\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t<div");
+WriteLiteral(">\r\n\t\t<div");
 
 WriteLiteral(" class=\"row\"");
 
@@ -101,19 +101,19 @@ WriteLiteral(">\r\n");
 
             
             #line 23 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-									
+			
             
             #line default
             #line hidden
             
             #line 23 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-                                     foreach (var item in Model)
-									{
+             foreach (var item in Model)
+			{
 
             
             #line default
             #line hidden
-WriteLiteral("\t\t\t\t\t\t\t\t\t\t<div");
+WriteLiteral("\t\t\t\t<div");
 
 WriteLiteral(" class=\"col-md-6 col-sm-6\"");
 
@@ -121,108 +121,108 @@ WriteLiteral(">\r\n");
 
             
             #line 26 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-											
+					
             
             #line default
             #line hidden
             
             #line 26 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-                                               Html.RenderPartial("_SliderTileCourse", item); 
+                       Html.RenderPartial("_SliderTileCourse", item); 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n");
+WriteLiteral("\r\n\t\t\t\t</div>\r\n");
 
             
             #line 28 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-									}
+			}
 
             
             #line default
             #line hidden
-WriteLiteral("\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<!-- end course content container -->\r\n\t\t\t\t" +
-"\t\t\t<!-- start course pagination -->\r\n\t\t\t\t\t\t\t<div");
+WriteLiteral("\t\t</div>\r\n\t</div>\r\n\t<!-- end course content container -->\r\n\t<!-- start course pag" +
+"ination -->\r\n\t<div");
 
 WriteLiteral(" class=\"mu-pagination\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t<nav>\r\n\t\t\t\t\t\t\t\t\t<ul");
+WriteLiteral(">\r\n\t\t<nav>\r\n\t\t\t<ul");
 
 WriteLiteral(" class=\"pagination\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t\t\t\t\t<a");
+WriteLiteral(">\r\n\t\t\t\t<li>\r\n\t\t\t\t\t<a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 978), Tuple.Create("\"", 1120)
+WriteAttribute("href", Tuple.Create(" href=\"", 848), Tuple.Create("\"", 990)
             
             #line 37 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 985), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", (currentPage - 1).ToString()} })
+, Tuple.Create(Tuple.Create("", 855), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", (currentPage - 1).ToString()} })
             
             #line default
             #line hidden
-, 985), false)
+, 855), false)
 );
 
 WriteLiteral(" aria-label=\"Previous\"");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 1143), Tuple.Create("\"", 1192)
-, Tuple.Create(Tuple.Create("", 1151), Tuple.Create("btn", 1151), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 1013), Tuple.Create("\"", 1062)
+, Tuple.Create(Tuple.Create("", 1021), Tuple.Create("btn", 1021), true)
             
             #line 37 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-                                                                                                                                               , Tuple.Create(Tuple.Create(" ", 1154), Tuple.Create<System.Object, System.Int32>(currentPage == 0 ? "disabled" : ""
+                                                                                                                       , Tuple.Create(Tuple.Create(" ", 1024), Tuple.Create<System.Object, System.Int32>(currentPage == 0 ? "disabled" : ""
             
             #line default
             #line hidden
-, 1155), false)
+, 1025), false)
 );
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<span");
+WriteLiteral(">\r\n\t\t\t\t\t\t<span");
 
 WriteLiteral(" class=\"fa fa-angle-left\"");
 
-WriteLiteral("></span> Prev\r\n\t\t\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t\t\t</li>\r\n");
+WriteLiteral("></span> Prev\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n");
 
             
             #line 41 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-										
+				
             
             #line default
             #line hidden
             
             #line 41 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-                                         for (var i = 1; i <= maxPage; i++)
-										{
+                 for (var i = 1; i <= maxPage; i++)
+				{
 
             
             #line default
             #line hidden
-WriteLiteral("\t\t\t\t\t\t\t\t\t\t\t<li");
+WriteLiteral("\t\t\t\t\t<li");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 1361), Tuple.Create("\"", 1404)
+WriteAttribute("class", Tuple.Create(" class=\"", 1195), Tuple.Create("\"", 1238)
             
             #line 43 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1369), Tuple.Create<System.Object, System.Int32>(i == currentPage ? "active" : ""
+, Tuple.Create(Tuple.Create("", 1203), Tuple.Create<System.Object, System.Int32>(i == currentPage ? "active" : ""
             
             #line default
             #line hidden
-, 1369), false)
+, 1203), false)
 );
 
 WriteLiteral("><a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1408), Tuple.Create("\"", 1535)
+WriteAttribute("href", Tuple.Create(" href=\"", 1242), Tuple.Create("\"", 1369)
             
             #line 43 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-                     , Tuple.Create(Tuple.Create("", 1415), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", i.ToString() } })
+, Tuple.Create(Tuple.Create("", 1249), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", i.ToString() } })
             
             #line default
             #line hidden
-, 1415), false)
+, 1249), false)
 );
 
 WriteLiteral(">");
 
             
             #line 43 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-                                                                                                                                                                                                                          Write(i);
+                                                                                                                                                                                                  Write(i);
 
             
             #line default
@@ -231,42 +231,42 @@ WriteLiteral("</a></li>\r\n");
 
             
             #line 44 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-										}
+				}
 
             
             #line default
             #line hidden
-WriteLiteral("\t\t\t\t\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t\t\t\t\t<a");
+WriteLiteral("\t\t\t\t<li>\r\n\t\t\t\t\t<a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1592), Tuple.Create("\"", 1734)
+WriteAttribute("href", Tuple.Create(" href=\"", 1408), Tuple.Create("\"", 1550)
             
             #line 46 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1599), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", (currentPage + 1).ToString()} })
+, Tuple.Create(Tuple.Create("", 1415), Tuple.Create<System.Object, System.Int32>(HtmlHelpers.ActionLink("Course", "Index", "CourseArchive", new Dictionary<string, string> { { "page", (currentPage + 1).ToString()} })
             
             #line default
             #line hidden
-, 1599), false)
+, 1415), false)
 );
 
 WriteLiteral(" aria-label=\"Next\"");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 1753), Tuple.Create("\"", 1808)
-, Tuple.Create(Tuple.Create("", 1761), Tuple.Create("btn", 1761), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 1569), Tuple.Create("\"", 1624)
+, Tuple.Create(Tuple.Create("", 1577), Tuple.Create("btn", 1577), true)
             
             #line 46 "..\..\MVC\Views\CourseArchive\Index.cshtml"
-                                                                                                                                           , Tuple.Create(Tuple.Create(" ", 1764), Tuple.Create<System.Object, System.Int32>(currentPage >= maxPage ? "disabled" : ""
+                                                                                                                   , Tuple.Create(Tuple.Create(" ", 1580), Tuple.Create<System.Object, System.Int32>(currentPage >= maxPage ? "disabled" : ""
             
             #line default
             #line hidden
-, 1765), false)
+, 1581), false)
 );
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\tNext <span");
+WriteLiteral(">\r\n\t\t\t\t\t\tNext <span");
 
 WriteLiteral(" class=\"fa fa-angle-right\"");
 
-WriteLiteral("></span>\r\n\t\t\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t\t</nav>\r\n\t\t\t\t\t" +
-"\t\t</div>\r\n\t\t\t\t\t\t\t<!-- end course pagination -->\r\n\t\t\t\t\t\t</div>\r\n");
+WriteLiteral("></span>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</nav>\r\n\t</div>\r\n\t<!-- end course pag" +
+"ination -->\r\n</div>\r\n");
 
         }
     }

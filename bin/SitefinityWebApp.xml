@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SitefinityWebApp</name>
+    </assembly>
+    <members>
+        <member name="T:SitefinityWebApp.AzureWebRole">
+            <summary>
+            Sitefinity's Windows Azure role entry point.
+            </summary>
+            <remarks>
+            Windows Azure looks for RoleEntryPoint inheritors only in the web role assembly and that is why this class is defined here.
+            The functionality goes into the base class - <see cref="T:Telerik.Sitefinity.Cloud.WindowsAzure.AzureWebRoleBase"/>.
+            </remarks>
+        </member>
+        <member name="M:SitefinityWebApp.Mvc.Controllers.BreadcrumbController.Index">
+            <summary>
+            This is the default Action.
+            </summary>
+        </member>
+        <member name="M:SitefinityWebApp.Mvc.Controllers.CustomGalleryController.Index">
+            <summary>
+            This is the default Action.
+            </summary>
+        </member>
+        <member name="M:SitefinityWebApp.Mvc.Controllers.FooterController.Index">
+            <summary>
+            This is the default Action.
+            </summary>
+        </member>
+        <member name="M:SitefinityWebApp.Mvc.Controllers.HeaderController.Index">
+            <summary>
+            This is the default Action.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Controllers.HTMLContentController.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="M:SitefinityWebApp.Mvc.Controllers.HTMLContentController.Index">
+            <summary>
+            This is the default Action.
+            </summary>
+        </member>
+        <member name="M:SitefinityWebApp.Mvc.Controllers.NavigationController.Index">
+            <summary>
+            This is the default Action.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Controllers.PaginationController.Id">
+            <summary>
+            Gets or sets the Id.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Controllers.PaginationController.ContentTitles">
+            <summary>
+            Gets or sets the ContentTitles.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Controllers.PaginationController.Category">
+            <summary>
+            Gets or sets the Category.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Controllers.PaginationController.TilePerPage">
+            <summary>
+            Gets or sets the TilePerPage.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Controllers.PaginationController.WrapTileClasses">
+            <summary>
+            Gets or sets the WrapTileClasses
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Controllers.PaginationController.WrapperClasses">
+            <summary>
+            Gets or sets the WrapperClasses
+            </summary>
+        </member>
+        <member name="M:SitefinityWebApp.Mvc.Controllers.SliderController.Index">
+            <summary>
+            This is the default Action.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Models.BreadcrumbModel.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Models.CustomGalleryModel.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Models.HTMLContentModel.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Models.NavigationModel.DisplayText">
+            <summary>
+            Display Text
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Models.NavigationModel.Link">
+            <summary>
+            Navigation Link
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Models.NavigationModel.Children">
+            <summary>
+            Chid
+            </summary>
+        </member>
+        <member name="P:SitefinityWebApp.Mvc.Models.PaginationModel.ContentItems">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+    </members>
+</doc>

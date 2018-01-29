@@ -95,7 +95,7 @@ WriteLiteral(">\r\n");
             #line hidden
             
             #line 15 "..\..\MVC\Views\Layouts\DefaultTemplate.cshtml"
-         if (!SitefinityContext.IsBackend)
+         if (!SitefinityContext.IsBackend || SitefinityContext.IsPreviewMode)
 		{
 
             
@@ -103,9 +103,9 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("\t\t\t<link");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 612), Tuple.Create("\"", 641)
-, Tuple.Create(Tuple.Create("", 619), Tuple.Create<System.Object, System.Int32>(Href("~/Styles/bootstrap.css")
-, 619), false)
+WriteAttribute("href", Tuple.Create(" href=\"", 647), Tuple.Create("\"", 676)
+, Tuple.Create(Tuple.Create("", 654), Tuple.Create<System.Object, System.Int32>(Href("~/Styles/bootstrap.css")
+, 654), false)
 );
 
 WriteLiteral(" rel=\"stylesheet\"");
@@ -156,9 +156,9 @@ WriteLiteral("></i>\r\n\t\t</a>\r\n\t\t<!-- END SCROLL TOP BUTTON -->\r\n\r\n");
             #line hidden
 WriteLiteral("\t\t\t<script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 928), Tuple.Create("\"", 957)
-, Tuple.Create(Tuple.Create("", 934), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/jquery.min.js")
-, 934), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 963), Tuple.Create("\"", 992)
+, Tuple.Create(Tuple.Create("", 969), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/jquery.min.js")
+, 969), false)
 );
 
 WriteLiteral("></script>\r\n");

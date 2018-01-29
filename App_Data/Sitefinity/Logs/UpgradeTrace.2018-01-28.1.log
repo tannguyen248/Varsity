@@ -1,0 +1,22 @@
+----------------------------------------
+Timestamp: 1/24/2018 11:12:52 AM
+
+Message: Db Migration Complexity: Complex
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/24/2018 11:12:52 AM
+
+Message: Removing a column(s) from an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/24/2018 11:12:52 AM
+
+Message: -- dropping unknown column [CourseOutline]
+ALTER TABLE [course_course] DROP COLUMN [CourseOutline]
+
+
+----------------------------------------

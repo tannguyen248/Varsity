@@ -10,10 +10,9 @@ using Telerik.Sitefinity.Data.Metadata;
 using Telerik.Sitefinity.DynamicModules;
 using System.Collections;
 using Telerik.Sitefinity.DynamicModules.Model;
-using System.Collections.Generic;
-using Telerik.Sitefinity.Model;
-using Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Controllers;
 using SitefinityWebApp.Utilities;
+using Telerik.Sitefinity.RelatedData;
+using Telerik.Sitefinity.GenericContent.Model;
 
 namespace SitefinityWebApp.Mvc.Controllers
 {
@@ -23,10 +22,13 @@ namespace SitefinityWebApp.Mvc.Controllers
         {
             var course = DynamicContentHelpers.GetDynamicContent("Telerik.Sitefinity.DynamicTypes.Model.Course.Course", Utils.DecodeDetailTitle(title)).FirstOrDefault();
             var courses = DynamicContentHelpers.GetDynamicContent("Telerik.Sitefinity.DynamicTypes.Model.Course.Course");
+            var outlines = course.GetRelatedItems<DynamicContent>("Outline")
+                                    .ToList();
 
             var model = new CourseDetailModel
             {
                 CourseDetail = course,
+                Outlines = outlines,
                 RelatedCourses = courses
             };
 

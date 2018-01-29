@@ -419,7 +419,7 @@ WriteLiteral("\t\t");
 
             
             #line 21 "..\..\MVC\Views\Layouts\_MVCLayout.cshtml"
-   Write(RenderSection("Breadcrumb", required: true));
+   Write(RenderSection("Breadcrumb", required: false));
 
             
             #line default
@@ -502,9 +502,9 @@ WriteLiteral("\r\n\r\n");
             #line hidden
 WriteLiteral("\t\t\t<script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 993), Tuple.Create("\"", 1022)
-, Tuple.Create(Tuple.Create("", 999), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/jquery.min.js")
-, 999), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 994), Tuple.Create("\"", 1023)
+, Tuple.Create(Tuple.Create("", 1000), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/jquery.min.js")
+, 1000), false)
 );
 
 WriteLiteral("></script>\r\n");

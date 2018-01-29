@@ -50,13 +50,290 @@ namespace ASP
     public partial class _MVC_Views_CourseDetail_Index_cshtml : System.Web.Mvc.WebViewPage<CourseDetailModel>
     {
 
-#line 100 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 33 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+public System.Web.WebPages.HelperResult RenderCourseOutline(List<DynamicContent> outlines) {
+#line default
+#line hidden
+return new System.Web.WebPages.HelperResult(__razor_helper_writer => {
+
+#line 33 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                                                            
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "<h4>Course Outline</h4>\r\n");
+
+WriteLiteralTo(__razor_helper_writer, "<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"table-responsive\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t<table");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"table\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t<thead>\r\n\t\t\t<tr>\r\n\t\t\t\t<th> Title </th>\r\n\t\t\t\t<th> Course Time </th>\r\n\t\t\t\t<th>" +
+" Spent Time </th>\r\n\t\t\t\t<th> Status </th>\r\n\t\t\t</tr>\r\n\t\t</thead>\r\n\t\t<tbody>\r\n");
+
+
+#line 46 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+			
+
+#line default
+#line hidden
+
+#line 46 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+             for (var i = 0; i < outlines.Count; i++) {
+				var outline = outlines[i];
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\t\t\t\t<tr>\r\n\t\t\t\t\t<td>");
+
+
+#line 49 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, i + 1);
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, ". ");
+
+
+#line 49 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+    WriteTo(__razor_helper_writer, outline.GetValue("DisplayTitle"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</td>\r\n\t\t\t\t\t<td>");
+
+
+#line 50 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, outline.GetValue("CourseTime"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</td>\r\n\t\t\t\t\t<td>");
+
+
+#line 51 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, outline.GetValue("SpentTime"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</td>\r\n\t\t\t\t\t<td>");
+
+
+#line 52 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, outline.GetValue("CourseStatus"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</td>\r\n\t\t\t\t</tr>\r\n");
+
+
+#line 54 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+			}
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\t\t</tbody>\r\n\t</table>\r\n</div>\r\n");
+
+
+#line 58 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+
+
+#line default
+#line hidden
+});
+
+#line 58 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+}
+#line default
+#line hidden
+
+#line 60 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+public System.Web.WebPages.HelperResult RenderCourseDetail(DynamicContent courseDetail)
+{
+#line default
+#line hidden
+return new System.Web.WebPages.HelperResult(__razor_helper_writer => {
+
+#line 61 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+ 
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"mu-latest-course-single\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t<figure");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"mu-latest-course-img\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t\t<a");
+
+WriteLiteralTo(__razor_helper_writer, " href=\"#\"");
+
+WriteLiteralTo(__razor_helper_writer, "><img");
+
+WriteAttributeTo(__razor_helper_writer, "src", Tuple.Create(" src=\"", 1506), Tuple.Create("\"", 1547)
+
+#line 64 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 1512), Tuple.Create<System.Object, System.Int32>(courseDetail.GetValue("ImageLink")
+
+#line default
+#line hidden
+, 1512), false)
+);
+
+WriteLiteralTo(__razor_helper_writer, " alt=\"img\"");
+
+WriteLiteralTo(__razor_helper_writer, "></a>\r\n\t\t\t<figcaption");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"mu-latest-course-imgcaption\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t\t\t<a");
+
+WriteLiteralTo(__razor_helper_writer, " href=\"#\"");
+
+WriteLiteralTo(__razor_helper_writer, ">");
+
+
+#line 66 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, courseDetail.GetValue("Type"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</a>\r\n\t\t\t\t<span><i");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"fa fa-clock-o\"");
+
+WriteLiteralTo(__razor_helper_writer, "></i>");
+
+
+#line 67 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                     WriteTo(__razor_helper_writer, courseDetail.GetValue("Days"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, " Days</span>\r\n\t\t\t</figcaption>\r\n\t\t</figure>\r\n\t\t<div");
+
+WriteLiteralTo(__razor_helper_writer, " class=\"mu-latest-course-single-content\"");
+
+WriteLiteralTo(__razor_helper_writer, ">\r\n\t\t\t<h2><a");
+
+WriteLiteralTo(__razor_helper_writer, " href=\"#\"");
+
+WriteLiteralTo(__razor_helper_writer, ">");
+
+
+#line 71 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, courseDetail.GetValue("DisplayTitle"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</a></h2>\r\n\t\t\t<h4>Course Information</h4>\r\n\t\t\t<ul>\r\n\t\t\t\t<li> <span>Course Price</" +
+"span> <span>");
+
+
+#line 74 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                       WriteTo(__razor_helper_writer, courseDetail.GetValue("Price"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</span></li>\r\n\t\t\t\t<li> <span>Place</span> <span>");
+
+
+#line 75 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                WriteTo(__razor_helper_writer, courseDetail.GetValue("Place"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</span></li>\r\n\t\t\t\t<li> <span>Total Students</span> <span>");
+
+
+#line 76 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                         WriteTo(__razor_helper_writer, courseDetail.GetValue("TotalStudent"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</span></li>\r\n\t\t\t\t<li> <span>Course Duration</span> <span>");
+
+
+#line 77 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                          WriteTo(__razor_helper_writer, courseDetail.GetValue("CourseDuration"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</span></li>\r\n\t\t\t\t<li> <span>Course Start</span> <span>");
+
+
+#line 78 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+                       WriteTo(__razor_helper_writer, courseDetail.GetValue("CourseStart"));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "</span></li>\r\n\t\t\t</ul>\r\n\t\t\t<h4>Description</h4>\r\n");
+
+WriteLiteralTo(__razor_helper_writer, "\t\t\t");
+
+
+#line 81 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, Html.Raw(courseDetail.GetValue("LongDescription")));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\r\n");
+
+WriteLiteralTo(__razor_helper_writer, "\t\t\t");
+
+
+#line 82 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+WriteTo(__razor_helper_writer, RenderCourseOutline(Model.Outlines));
+
+
+#line default
+#line hidden
+WriteLiteralTo(__razor_helper_writer, "\r\n\t\t</div>\r\n\t</div>\r\n");
+
+
+#line 85 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+
+
+#line default
+#line hidden
+});
+
+#line 85 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+}
+#line default
+#line hidden
+
+#line 87 "..\..\MVC\Views\CourseDetail\Index.cshtml"
 public System.Web.WebPages.HelperResult RenderRelatedCourses(List<DynamicContent> relatedCourses) {
 #line default
 #line hidden
 return new System.Web.WebPages.HelperResult(__razor_helper_writer => {
 
-#line 100 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 87 "..\..\MVC\Views\CourseDetail\Index.cshtml"
                                                                    
 
 
@@ -85,13 +362,13 @@ WriteLiteralTo(__razor_helper_writer, " id=\"mu-related-item-slide\"");
 WriteLiteralTo(__razor_helper_writer, ">\r\n");
 
 
-#line 107 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 94 "..\..\MVC\Views\CourseDetail\Index.cshtml"
 						
 
 #line default
 #line hidden
 
-#line 107 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 94 "..\..\MVC\Views\CourseDetail\Index.cshtml"
                          foreach (var course in relatedCourses)
 						{
 
@@ -105,13 +382,13 @@ WriteLiteralTo(__razor_helper_writer, " class=\"col-md-6\"");
 WriteLiteralTo(__razor_helper_writer, ">\r\n");
 
 
-#line 110 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 97 "..\..\MVC\Views\CourseDetail\Index.cshtml"
 								
 
 #line default
 #line hidden
 
-#line 110 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 97 "..\..\MVC\Views\CourseDetail\Index.cshtml"
                                    Html.RenderPartial("_SliderTileCourse", course); 
 
 #line default
@@ -119,7 +396,7 @@ WriteLiteralTo(__razor_helper_writer, ">\r\n");
 WriteLiteralTo(__razor_helper_writer, "\r\n\t\t\t\t\t\t\t</div>\r\n");
 
 
-#line 112 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 99 "..\..\MVC\Views\CourseDetail\Index.cshtml"
 						}
 
 
@@ -128,14 +405,14 @@ WriteLiteralTo(__razor_helper_writer, "\r\n\t\t\t\t\t\t\t</div>\r\n");
 WriteLiteralTo(__razor_helper_writer, "\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n");
 
 
-#line 118 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 105 "..\..\MVC\Views\CourseDetail\Index.cshtml"
 
 
 #line default
 #line hidden
 });
 
-#line 118 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+#line 105 "..\..\MVC\Views\CourseDetail\Index.cshtml"
 }
 #line default
 #line hidden
@@ -149,7 +426,7 @@ WriteLiteralTo(__razor_helper_writer, "\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\
             #line 1 "..\..\MVC\Views\CourseDetail\Index.cshtml"
   
 	Layout = "~/MVC/Views/Layouts/_MVCLayout.cshtml";
-	Page.Title = "Course Archive";
+	Page.Title = "Course Detail";
 
             
             #line default
@@ -160,14 +437,37 @@ WriteLiteral("\r\n");
 
             
             #line 12 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-   
+  
 	var courseDetail = Model.CourseDetail;
 	var relatedCourses = Model.RelatedCourses;
+	var pageName = Page.Title as string;
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<div");
+WriteLiteral("\r\n\r\n");
+
+DefineSection("Breadcrumb", () => {
+
+WriteLiteral("\r\n");
+
+            
+            #line 19 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+	
+            
+            #line default
+            #line hidden
+            
+            #line 19 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+       Html.RenderPartial("_Breadcrumb", pageName); 
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+});
+
+WriteLiteral("\r\n<div");
 
 WriteLiteral(" class=\"col-md-9\"");
 
@@ -175,183 +475,41 @@ WriteLiteral(">\r\n\t<div");
 
 WriteLiteral(" class=\"mu-course-container mu-course-details\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t<div");
+WriteLiteral(">\r\n\t\t<div");
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t<div");
+WriteLiteral(">\r\n\t\t\t<div");
 
 WriteLiteral(" class=\"col-md-12\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t<div");
+WriteLiteral(">\r\n");
 
-WriteLiteral(" class=\"mu-latest-course-single\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t<figure");
-
-WriteLiteral(" class=\"mu-latest-course-img\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral("><img");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 603), Tuple.Create("\"", 644)
-            
-            #line 23 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 609), Tuple.Create<System.Object, System.Int32>(courseDetail.GetValue("ImageLink")
-            
-            #line default
-            #line hidden
-, 609), false)
-);
-
-WriteLiteral(" alt=\"img\"");
-
-WriteLiteral("></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<figcaption");
-
-WriteLiteral(" class=\"mu-latest-course-imgcaption\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">");
-
-            
-            #line 25 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                           Write(courseDetail.GetValue("Type"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<span><i");
-
-WriteLiteral(" class=\"fa fa-clock-o\"");
-
-WriteLiteral("></i>");
+WriteLiteral("\t\t\t\t");
 
             
             #line 26 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                  Write(courseDetail.GetValue("Days"));
+           Write(RenderCourseDetail(Model.CourseDetail));
 
             
             #line default
             #line hidden
-WriteLiteral(" Days</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</figcaption>\r\n\t\t\t\t\t\t\t\t\t\t\t</figure>\r\n\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-latest-course-single-content\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<h2><a");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(">");
-
-            
-            #line 30 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                           Write(courseDetail.GetValue("DisplayTitle"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</a></h2>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<h4>Course Information</h4>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t\t\t\t\t\t" +
-"\t\t<li> <span>Course Price</span> <span>");
-
-            
-            #line 33 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                    Write(courseDetail.GetValue("Price"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Place</span> <span>");
-
-            
-            #line 34 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                             Write(courseDetail.GetValue("Place"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Total Students</span> <span>");
-
-            
-            #line 35 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                      Write(courseDetail.GetValue("TotalStudent"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Course Duration</span> <span>");
-
-            
-            #line 36 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                       Write(courseDetail.GetValue("CourseDuration"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<li> <span>Course Start</span> <span>");
-
-            
-            #line 37 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                                                                    Write(courseDetail.GetValue("CourseStart"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span></li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<h4>Description</h4>\r\n");
-
-WriteLiteral("\t\t\t\t\t\t\t\t\t\t\t\t");
-
-            
-            #line 40 "..\..\MVC\Views\CourseDetail\Index.cshtml"
-                                           Write(Html.Raw(courseDetail.GetValue("LongDescription")));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t\t\t\t\t<h4>Course Outline</h4>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"table-responsive\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<table");
-
-WriteLiteral(" class=\"table\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<thead>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th> Title </th>\r\n" +
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th> Course Time </th>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th> Spent Time </th>\r\n\t" +
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th> Status </th>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</thead>\r\n" +
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 1. Topic 1 </td" +
-">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 15:30 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 13:80 </td>\r\n\t\t\t\t\t\t\t\t\t" +
-"\t\t\t\t\t\t\t<td> Successful </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t" +
-"\t\t\t\t\t\t\t\t\t<td> 2. Topic 2 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 15:30 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" +
-"\t\t<td> 13:80 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> Successful </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r" +
-"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 3. Topic 3 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td" +
-"> 15:30 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> - </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> Successful </t" +
-"d>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 4. Topic 4 <" +
-"/td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 15:30 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 13:80 </td>\r\n\t\t\t\t\t\t" +
-"\t\t\t\t\t\t\t\t\t\t<td> Successful </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t" +
-"\t\t\t\t\t\t\t\t\t\t\t\t<td> 5. Topic 5 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 15:30 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t" +
-"\t\t\t\t\t<td> - </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> Waiting </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t" +
-"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 6. Topic 6 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 15" +
-":30 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> 13:80 </td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td> - </td>\r\n\t\t\t\t\t" +
-"\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</di" +
-"v>\r\n\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t" +
-"\t</div>\r\n");
+WriteLiteral("\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n");
 
 WriteLiteral("\t");
 
             
-            #line 97 "..\..\MVC\Views\CourseDetail\Index.cshtml"
+            #line 30 "..\..\MVC\Views\CourseDetail\Index.cshtml"
 Write(RenderRelatedCourses(relatedCourses));
 
             
             #line default
             #line hidden
 WriteLiteral("\r\n</div>\r\n\r\n");
+
+WriteLiteral("\r\n");
+
+WriteLiteral("\r\n");
 
         }
     }

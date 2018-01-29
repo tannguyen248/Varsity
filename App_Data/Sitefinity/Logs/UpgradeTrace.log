@@ -1,22 +1,114 @@
 ----------------------------------------
-Timestamp: 1/24/2018 11:12:52 AM
+Timestamp: 1/28/2018 3:17:20 PM
 
 Message: Db Migration Complexity: Complex
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 1/24/2018 11:12:52 AM
+Timestamp: 1/28/2018 3:17:20 PM
 
-Message: Removing a column(s) from an existing table(s).
+Message: Adding a foreign key constraint(s) to a new table(s), the create table statement(s) is included as well.
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 1/24/2018 11:12:52 AM
+Timestamp: 1/28/2018 3:17:20 PM
 
-Message: -- dropping unknown column [CourseOutline]
-ALTER TABLE [course_course] DROP COLUMN [CourseOutline]
+Message: Adding a new table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:17:20 PM
+
+Message: Modifying a column(s) on an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:17:20 PM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.sf_contact
+CREATE TABLE [sf_contact] (
+    [id] uniqueidentifier NOT NULL,
+    [text_field_controller_1] NVARCHAR(255) NULL, -- sf_contact.TextFieldController_1
+    [text_field_controller_0] NVARCHAR(255) NULL, -- sf_contact.TextFieldController_0
+    [text_field_controller] NVARCHAR(255) NULL, -- sf_contact.TextFieldController
+    [pragraph_text_field_controller] NVARCHAR(MAX) NULL, -- sf_contact.ParagraphTextFieldController
+    CONSTRAINT [pk_sf_contact] PRIMARY KEY ([id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:17:20 PM
+
+Message: -- Column was read from database as: [voa_class] int null
+-- modify column for field <internal-class-id>
+UPDATE [sf_form_entry]
+   SET [voa_class] = 0 -- Add your own default value here, for when [voa_class] is null.
+ WHERE [voa_class] IS NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:17:20 PM
+
+Message: ALTER TABLE [sf_form_entry] ALTER COLUMN [voa_class] int NOT NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:17:20 PM
+
+Message: ALTER TABLE [sf_contact] ADD CONSTRAINT [ref_sf_contact_sf_form_entry] FOREIGN KEY ([id]) REFERENCES [sf_form_entry]([id]) ON DELETE CASCADE
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:42:02 PM
+
+Message: Db Migration Complexity: Trivial
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:42:02 PM
+
+Message: Adding a foreign key constraint(s) to a new table(s), the create table statement(s) is included as well.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:42:02 PM
+
+Message: Adding a new table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:42:02 PM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.Gallery.CustomGallery
+CREATE TABLE [gallery_customgallery] (
+    [base_id] uniqueidentifier NOT NULL,
+    [Title] NVARCHAR(255) NULL,             -- CustomGallery.Title
+    [SubTitle] NVARCHAR(255) NULL,          -- CustomGallery.SubTitle
+    [SmallImageLink] NVARCHAR(255) NULL,    -- CustomGallery.SmallImageLink
+    [LongDescription] NVARCHAR(MAX) NULL,   -- CustomGallery.LongDescription
+    [GalleryItemTitle] NVARCHAR(255) NULL,  -- CustomGallery.GalleryItemTitle
+    [DisplayTitle] NVARCHAR(255) NULL,      -- CustomGallery.DisplayTitle
+    [BigImageLink] NVARCHAR(255) NULL,      -- CustomGallery.BigImageLink
+    CONSTRAINT [pk_gallery_customgallery] PRIMARY KEY ([base_id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/28/2018 3:42:02 PM
+
+Message: ALTER TABLE [gallery_customgallery] ADD CONSTRAINT [ref_gllry_cstmgllry_s_C98631B0] FOREIGN KEY ([base_id]) REFERENCES [sf_dynamic_content]([base_id]) ON DELETE CASCADE
 
 
 ----------------------------------------

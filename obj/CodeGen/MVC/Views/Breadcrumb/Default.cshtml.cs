@@ -27,70 +27,32 @@ namespace ASP
     using System.Web.UI;
     using System.Web.WebPages;
     
+    #line 1 "..\..\MVC\Views\Breadcrumb\Default.cshtml"
+    using Telerik.Sitefinity.Web;
+    
+    #line default
+    #line hidden
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/MVC/Views/Breadcrumb/Default.cshtml")]
-    public partial class _MVC_Views_Breadcrumb_Default_cshtml : System.Web.Mvc.WebViewPage<string>
+    public partial class _MVC_Views_Breadcrumb_Default_cshtml : System.Web.Mvc.WebViewPage<dynamic>
     {
         public _MVC_Views_Breadcrumb_Default_cshtml()
         {
         }
         public override void Execute()
         {
-WriteLiteral("<section");
-
-WriteLiteral(" id=\"mu-page-breadcrumb\"");
-
-WriteLiteral(">\r\n\t<div");
-
-WriteLiteral(" class=\"container\"");
-
-WriteLiteral(">\r\n\t\t<div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-12\"");
-
-WriteLiteral(">\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"mu-page-breadcrumb-area\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t<h2>");
+WriteLiteral("\r\n");
 
             
-            #line 8 "..\..\MVC\Views\Breadcrumb\Default.cshtml"
-                   Write(Model);
+            #line 3 "..\..\MVC\Views\Breadcrumb\Default.cshtml"
+   
+	SiteMapNode currentNode = SiteMapBase.GetCurrentProvider().CurrentNode;
+	Html.RenderPartial("_Breadcrumb", currentNode.Title);
 
             
             #line default
             #line hidden
-WriteLiteral("</h2>\r\n\t\t\t\t\t<ol");
-
-WriteLiteral(" class=\"breadcrumb\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t<li><a");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 234), Tuple.Create("\"", 243)
-, Tuple.Create(Tuple.Create("", 241), Tuple.Create<System.Object, System.Int32>(Href("~/")
-, 241), false)
-);
-
-WriteLiteral(">Home</a></li>\r\n\t\t\t\t\t\t<li");
-
-WriteLiteral(" class=\"active\"");
-
-WriteLiteral(">");
-
-            
-            #line 11 "..\..\MVC\Views\Breadcrumb\Default.cshtml"
-                                      Write(Model);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</li>\r\n\t\t\t\t\t</ol>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>");
-
         }
     }
 }

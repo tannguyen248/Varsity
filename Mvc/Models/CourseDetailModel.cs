@@ -8,6 +8,7 @@ namespace SitefinityWebApp.Mvc.Models
     public class CourseDetailModel
     {
         public DynamicContent CourseDetail { get; set; }
+        public List<DynamicContent> Outlines { get; set; }
         public List<DynamicContent> RelatedCourses { get; set; }
     }
 }

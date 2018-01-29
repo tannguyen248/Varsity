@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web.Mvc;
 using Telerik.Sitefinity.Mvc;
 using SitefinityWebApp.Mvc.Models;
+using Telerik.Sitefinity.Modules.GenericContent;
+using Telerik.Sitefinity.Frontend.InlineEditing.Attributes;
 
 namespace SitefinityWebApp.Mvc.Controllers
 {
@@ -14,6 +16,8 @@ namespace SitefinityWebApp.Mvc.Controllers
         /// Gets or sets the message.
         /// </summary>
         [Category("String Properties")]
+        [DynamicLinksContainer]
+        [FieldInfo("Content", "LongText")]
         public string Message { get; set; }
 
         /// <summary>

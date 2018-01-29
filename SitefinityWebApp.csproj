@@ -1100,9 +1100,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mvc\Controllers\BreadcrumbController.cs" />
+    <Compile Include="Mvc\Controllers\CustomGalleryController.cs" />
     <Compile Include="Mvc\Controllers\FooterController.cs" />
     <Compile Include="Mvc\Controllers\HeaderController.cs" />
     <Compile Include="Mvc\Models\BreadcrumbModel.cs" />
+    <Compile Include="Mvc\Models\CustomGalleryModel.cs" />
     <Compile Include="Utilities\HtmlHelpers.cs" />
     <Compile Include="Mvc\Controllers\CourseArchiveController.cs" />
     <Compile Include="Mvc\Controllers\CourseDetailController.cs" />
@@ -1578,6 +1580,9 @@
     <Content Include="Mvc\Views\Footer\Default.cshtml" />
     <Content Include="Mvc\Views\Header\Default.cshtml" />
     <Content Include="Mvc\Views\Breadcrumb\Default.cshtml" />
+    <Content Include="Mvc\Views\Shared\_Breadcrumb.cshtml" />
+    <Content Include="Mvc\Views\CustomGallery\Default.cshtml" />
+    <None Include="Properties\PublishProfiles\SitefinityAmazon.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

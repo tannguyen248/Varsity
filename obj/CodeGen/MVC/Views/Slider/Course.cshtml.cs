@@ -36,41 +36,28 @@ namespace ASP
         }
         public override void Execute()
         {
-WriteLiteral("<h1");
+WriteLiteral("<section");
 
-WriteLiteral(" style=\"color:white\"");
-
-WriteLiteral(">");
-
+WriteAttribute("class", Tuple.Create(" class=\"", 59), Tuple.Create("\"", 90)
             
             #line 3 "..\..\MVC\Views\Slider\Course.cshtml"
-                   Write(ViewBag.Count);
-
+, Tuple.Create(Tuple.Create("", 67), Tuple.Create<System.Object, System.Int32>(Model.ContainerClasses
             
             #line default
             #line hidden
-WriteLiteral("</h1>\r\n<section");
-
-WriteAttribute("class", Tuple.Create(" class=\"", 104), Tuple.Create("\"", 135)
-            
-            #line 4 "..\..\MVC\Views\Slider\Course.cshtml"
-, Tuple.Create(Tuple.Create("", 112), Tuple.Create<System.Object, System.Int32>(Model.ContainerClasses
-            
-            #line default
-            #line hidden
-, 112), false)
+, 67), false)
 );
 
 WriteLiteral(">\r\n");
 
             
-            #line 5 "..\..\MVC\Views\Slider\Course.cshtml"
+            #line 4 "..\..\MVC\Views\Slider\Course.cshtml"
 	
             
             #line default
             #line hidden
             
-            #line 5 "..\..\MVC\Views\Slider\Course.cshtml"
+            #line 4 "..\..\MVC\Views\Slider\Course.cshtml"
      foreach (var item in Model.DynamicContentItems)
 	{
 
@@ -79,26 +66,26 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("\t\t<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 200), Tuple.Create("\"", 226)
+WriteAttribute("class", Tuple.Create(" class=\"", 155), Tuple.Create("\"", 181)
             
-            #line 7 "..\..\MVC\Views\Slider\Course.cshtml"
-, Tuple.Create(Tuple.Create("", 208), Tuple.Create<System.Object, System.Int32>(Model.TileClasses
+            #line 6 "..\..\MVC\Views\Slider\Course.cshtml"
+, Tuple.Create(Tuple.Create("", 163), Tuple.Create<System.Object, System.Int32>(Model.TileClasses
             
             #line default
             #line hidden
-, 208), false)
+, 163), false)
 );
 
 WriteLiteral(">\r\n");
 
             
-            #line 8 "..\..\MVC\Views\Slider\Course.cshtml"
+            #line 7 "..\..\MVC\Views\Slider\Course.cshtml"
 			
             
             #line default
             #line hidden
             
-            #line 8 "..\..\MVC\Views\Slider\Course.cshtml"
+            #line 7 "..\..\MVC\Views\Slider\Course.cshtml"
                Html.RenderPartial("_SliderTileCourse", item); 
             
             #line default
@@ -106,7 +93,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\r\n\t\t</div>\r\n");
 
             
-            #line 10 "..\..\MVC\Views\Slider\Course.cshtml"
+            #line 9 "..\..\MVC\Views\Slider\Course.cshtml"
 	}
 
             

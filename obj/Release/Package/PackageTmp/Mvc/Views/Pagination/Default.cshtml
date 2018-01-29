@@ -1,0 +1,48 @@
+@model SitefinityWebApp.Mvc.Models.PaginationModel
+@using Telerik.Sitefinity.GenericContent.Model;
+
+@{ 
+	var paginationId = ViewBag.Id + "pagination";
+}
+<h1>Page: @ViewBag.Page</h1>
+<div class="@ViewBag.WrapperClasses" id="@ViewBag.Id">
+	<div class="row">
+		@foreach (var item in Model.ContentItems)
+		{
+			<div class="@ViewBag.WrapTileClasses">
+				@Html.Raw(item.Content.Value);
+			</div>
+		}
+	</div>
+</div>
+
+<div class="mu-pagination" id="@paginationId">
+	<nav>
+		<ul class="pagination">
+			<li>
+				<a href="#" aria-label="Previous" class="btn @(Model.CurrentPage > 0 ? "" : "disabled")">
+					<span class="fa fa-angle-left"></span> Prev
+				</a>
+			</li>
+			@for (var i = 0; i < Model.MaxPage; i++)
+			{
+				<li class="active"><a href="#">@(i + 1)</a></li>
+			}
+			<li>
+				<a href="#" aria-label="Next" class="btn @(Model.CurrentPage >= Model.MaxPage - 1 ? "disabled" : "")">
+					Next <span class="fa fa-angle-right"></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+@*<script>
+	var contentItems = @Model.ContentItems;
+	var containerId = @ViewBag.Id;
+	var tilePerPage = @ViewBag.TilePerPage;
+	var paginationId = @paginationId;
+	var tileClasses = @ViewBag.WrapTileClasses;
+</script>
+
+@Scripts.Render("~/bundle/pagination")*@

@@ -1,0 +1,30 @@
+﻿[
+  { 
+    "DisplayText": "Home", 
+    "Link": "/" 
+  },
+  { 
+    "DisplayText": "Course", 
+    "Link": "course", 
+    "Children": [
+      { "DisplayText": "Course Archive", "Link": "course-archive"},
+      { "DisplayText": "Course Detail", "Link": "course-detail"}
+    ] 
+  },
+  {
+    "DisplayText": "Gallery", 
+    "Link": "gallery" 
+  },
+  {
+    "DisplayText": "Blog", 
+    "Link": "blog", 
+    "Children": [
+      { "DisplayText": "Blog Archive", "Link": "blog-archive"},
+      { "DisplayText": "Blog Single", "Link": "blog-single"}
+    ]
+  },
+  {
+    "DisplayText": "Contact", 
+    "Link": "contact" 
+  },
+]
