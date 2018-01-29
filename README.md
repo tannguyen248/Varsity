@@ -22,3 +22,7 @@ This is Sitefnity project
 ## MVC Pages:
 - Course
 - Course Archive
+
+## Custom content:
+- Course and Course Outlines
+- Gallery
